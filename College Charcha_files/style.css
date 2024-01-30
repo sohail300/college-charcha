@@ -109,7 +109,7 @@ a:focus {
 
   .header .navbar-light a.nav-link:hover,
   .header .navbar-light a.nav-link.active {
-    color: #ffd662;
+    color: gold;
   }
 }
 
@@ -140,16 +140,17 @@ a:focus {
   padding: 12px 20px 10px 20px;
   font-size: 13px;
   text-transform: uppercase;
-  color: #00539c;
+  color: #000;
+  font-weight: 700;
   border: none;
   border-radius: 5px;
-  background: #ffffff;
+  background: gold;
   transition: 0.3s;
 }
 
 .header .navbar .btn:hover {
-  color: #000000;
-  background: #ffd662;
+  color: #fff;
+  background: purple;
 }
 
 .header .navbar .btn i {
@@ -218,7 +219,7 @@ a:focus {
 .hero .form {
   padding: 30px;
   border: 1px solid rgba(255, 255, 255, 0.4);
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 5px;
 }
 
@@ -281,29 +282,40 @@ a:focus {
   right: 0;
   transform: translateY(-50%);
   background-color: #f2f2f2;
-  padding: 10px;
+  /* padding: 10px; */
   z-index: 1000;
 }
 
 #social-links a {
+  color: #fff;
   display: block;
-  margin-bottom: 10px;
+  padding: 6px 12px;
   text-decoration: none;
   color: #333;
+  display: flex;
+  justify-content: space-between;
 }
 
 #whatsapp-link {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366; /* WhatsApp color */
-  padding: 10px;
-  border-radius: 50%;
+  bottom: 16px;
+  right: 16px;
+  padding: 8px;
   z-index: 1000;
   text-align: center;
   color: #fff;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 64px;
+}
+
+#social-links a i {
+  margin-right: 15px;
+  font-size: 25px;
+  color: #ffffff;
+}
+
+#social-links a:last-child i {
+  margin: 0;
 }
 
 /******* Section Header ********/
@@ -313,7 +325,7 @@ a:focus {
   max-width: 550px;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 60px;
+  margin-bottom: 32px;
   padding-bottom: 15px;
 }
 
@@ -324,7 +336,7 @@ a:focus {
   height: 3px;
   left: calc(50% - 50px);
   bottom: 0;
-  background: linear-gradient(to left, #ffd662, #00539c, #ffd662);
+  background: linear-gradient(to left, gold, #00539c, gold);
   border-radius: 100%; */
 }
 
@@ -357,7 +369,7 @@ a:focus {
 .section-header.left::before {
   width: 60px;
   left: 0;
-  background: linear-gradient(to left, #ffd662, #00539c, #00539c);
+  background: linear-gradient(to left, gold, #00539c, #00539c);
   border-radius: 0 100% 100% 0;
 }
 
@@ -370,7 +382,8 @@ a:focus {
 .about {
   position: relative;
   width: 100%;
-  padding: 45px 0;
+  padding: 40px 0;
+  background-color: #eee;
 }
 
 .about .about-img img {
@@ -401,7 +414,7 @@ a:focus {
   color: #000000;
   border: none;
   border-radius: 5px;
-  background: #ffd662;
+  background: gold;
   transition: 0.3s;
 }
 
@@ -420,7 +433,24 @@ a:focus {
 .service {
   position: relative;
   width: 100%;
-  padding: 45px 0 15px 0;
+  padding: 45px 0px;
+}
+
+.service .btn {
+  margin: auto 0px;
+  height: 48px;
+  padding: 0 20px;
+  color: #000;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: gold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.service .btn:hover {
+  color: #fff;
+  background: purple;
 }
 
 .service .service-item {
@@ -432,6 +462,7 @@ a:focus {
   margin-bottom: 30px;
   padding: 8px;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .service .service-item img {
@@ -443,19 +474,19 @@ a:focus {
 
 .service .service-item h3 {
   margin: 0;
-  padding: 25px 15px 15px 15px;
+  padding: 25px 15px;
   font-size: 20px;
   font-weight: 400;
-  color: #00539c;
+  color: var(--rich-pruple);
 }
 
 .service .service-item p::before {
-    position: relative;
-    content: "\f0da";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    margin-right: 4px;
-  }
+  position: relative;
+  content: "\f0da";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  margin-right: 4px;
+}
 
 .service .service-item p {
   margin: 0;
@@ -473,7 +504,7 @@ a:focus {
   color: #000000;
   border: none;
   border-radius: 5px;
-  background: #ffd662;
+  background: gold;
   transition: 0.3s;
 }
 
@@ -484,7 +515,7 @@ a:focus {
 
 .service .service-item a.btn:hover {
   color: #000000;
-  background: #ffd662;
+  background: gold;
 }
 
 /********* Feature CSS *********/
@@ -499,15 +530,15 @@ a:focus {
   cursor: pointer;
 }
 
-.content h2{
+.content h2 {
   color: var(--rich-pruple);
 }
 
-.content h3{
-    color: #000;
-    font-size: 16px;
-    text-align: justify;
-  }
+.content h3 {
+  color: #000;
+  font-size: 16px;
+  text-align: justify;
+}
 
 .content img {
   width: 100%;
@@ -520,7 +551,7 @@ a:focus {
 .feature {
   position: relative;
   width: 100%;
-  padding: 45px 0 15px 0;
+  padding: 40px 0px;
 }
 
 .feature .section-header {
@@ -535,7 +566,7 @@ a:focus {
   color: #000000;
   border: none;
   border-radius: 5px;
-  background: #ffd662;
+  background: gold;
   transition: 0.3s;
 }
 
@@ -628,7 +659,7 @@ a:focus {
   height: 40px;
   margin-right: 10px;
   text-align: center;
-  background: #ffd662;
+  background: gold;
   color: #000000;
   border-radius: 5px;
 }
@@ -668,7 +699,7 @@ a:focus {
   color: #000000;
   border: none;
   border-radius: 5px;
-  background: #ffd662;
+  background: gold;
   transition: 0.3s;
 }
 
@@ -707,7 +738,7 @@ a:focus {
   margin-top: -90px;
   padding: 100px 25px 25px 25px;
   text-align: center;
-  background: #ffd662;
+  background: gold;
   border-radius: 5px;
 }
 
@@ -743,7 +774,7 @@ a:focus {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: #ffd662;
+  background: gold;
 }
 
 .testimonial .owl-dot.active {
@@ -813,7 +844,8 @@ a:focus {
 .contact {
   position: relative;
   width: 100%;
-  padding: 45px 0;
+  padding: 40px 0;
+  background-color: #eee;
 }
 
 .contact .faqs {
@@ -879,7 +911,6 @@ a:focus {
 /********* Footer CSS **********/
 .footer {
   position: relative;
-  margin-top: 45px;
   padding-top: 90px;
   background: var(--rich-pruple);
   color: #ffffff;
@@ -911,6 +942,7 @@ a:focus {
 
 .footer .footer-contact p i {
   width: 25px;
+  margin-right: 2px;
 }
 
 .footer .footer-social {
@@ -976,8 +1008,8 @@ a:focus {
 }
 
 .footer .footer-form .btn:hover {
-  color: #ffffff;
-  background: #00539c;
+  color: #fff;
+  background: purple;
 }
 
 .footer .footer-menu {
@@ -1000,7 +1032,7 @@ a:focus {
 }
 
 .footer .footer-menu .f-menu a:hover {
-  color: #ffd662;
+  color: gold;
 }
 
 .footer .footer-menu .f-menu a:last-child {
