@@ -118,7 +118,7 @@ app.post('/api/newsletter', async (req, res) => {
 
         const info = await transporter.sendMail({
             from: `Landing Page Email <ekaksha2001@gmail.com>`,
-            to: 'md.sohail.ansari999@gmail.com'
+            to: 'info@collegecharcha.co.in'
 
     ,
             subject: "Newsletter",
