@@ -181,9 +181,13 @@
     /* background: linear-gradient(to right bottom, #ad09ad, #3e043e);  */
   }
   
+  .hero .text {
+    margin-top: 20px;
+  }
+
   .hero h2 {
     margin: 0;
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 300;
     color: #fff;
   }
@@ -296,26 +300,31 @@
     padding: 20px;
     max-width: 400px;
     margin: auto;
-    text-align: center;
+    text-align: left;
     position: relative;
     border-radius: 8px;
+  }
+
+  .popup-content h2 {
+    text-align: center;
   }
   
   .close-btn {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    font-size: 28px;
+    top: 12px;
+    left: 24px;
+    font-size: 32px;
     cursor: pointer;
     color: red;
   }
   
-  button {
+  .popup-content button {
     padding: 10px;
     font-size: 16px;
     cursor: pointer;
-    height: 48px;
+    height: 40px;
     padding: 0 20px;
+    margin-top: 8px;
     color: #000;
     font-size: 18px;
     text-transform: uppercase;
