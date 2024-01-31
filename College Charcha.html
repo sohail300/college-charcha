@@ -10,19 +10,19 @@
     <link href="https://www.collegecharcha.co.in/img/favicon.ico" rel="icon" />
 
     <!-- Google Font -->
-    <link href="./College Charcha_files/css2" rel="stylesheet" />
+    <link href="./files/css2" rel="stylesheet" />
 
     <!-- CSS Libraries -->
-    <link href="./College Charcha_files/bootstrap.min.css" rel="stylesheet" />
-    <link href="./College Charcha_files/all.min.css" rel="stylesheet" />
+    <link href="./files/bootstrap.min.css" rel="stylesheet" />
+    <link href="./files/all.min.css" rel="stylesheet" />
     <link
-      href="./College Charcha_files/owl.carousel.min.css"
+      href="./files/owl.carousel.min.css"
       rel="stylesheet"
     />
-    <link href="./College Charcha_files/lightbox.min.css" rel="stylesheet" />
+    <link href="./files/lightbox.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="./College Charcha_files/style.css" rel="stylesheet" />
+    <link href="./assets/style.css" rel="stylesheet" />
 
     <link
       rel="preconnect"
@@ -30,7 +30,7 @@
       crossorigin="use-credentials"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com/" />
-    <link rel="stylesheet" href="./College Charcha_files/css2(1)" />
+    <link rel="stylesheet" href="./files/css2(1)" />
 
     <!-- Font Awesome -->
     <script
@@ -73,26 +73,31 @@
                 >
                   <div class="navbar-nav ml-auto">
                     <a
-                      href="https://www.collegecharcha.co.in/index.html"
+                      href="#landing-page"
                       class="nav-item nav-link active"
                       >Home</a
                     >
                     <a
-                      href="https://www.collegecharcha.co.in/#course"
+                      href="#course"
                       class="nav-item nav-link"
                       >Services</a
                     >
                     <a
-                      href="https://www.collegecharcha.co.in/#about"
+                      href="#about"
                       class="nav-item nav-link"
                       >About</a
                     >
                     <a
-                      href="https://www.collegecharcha.co.in/#contact"
+                      href="#feature"
+                      class="nav-item nav-link"
+                      >Why Choose Us</a
+                    >
+                    <a
+                      href="#contact"
                       class="nav-item nav-link"
                       >Contact</a
                     >
-                    <a href="https://www.collegecharcha.co.in/#" class="btn"
+                    <a class="btn" onclick="openPopup()"
                       >Get A Call</a
                     >
                   </div>
@@ -104,6 +109,31 @@
       </div>
       <!-- Navbar ends -->
 
+      <!-- Popup starts -->
+      <div class="popup" id="callPopup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Request a Call</h2>
+            <p>Fill out the form below to request a call:</p>
+            
+            <!-- Your form fields go here -->
+            <form action="http://localhost:3000/api/getacall" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+      <!-- Popup ends -->
+
       <!-- Hero Starts -->
       <div class="hero d-flex align-items-center">
         <div class="col-md-7">
@@ -113,7 +143,7 @@
             Building Futuristic Career with us , we are available for your
             guidance.
           </p>
-          <a class="btn" href="https://www.collegecharcha.co.in/">Enroll Now</a>
+          <a class="btn" onclick="openPopup()">Enroll Now</a>
         </div>
         <div class="col-md-5">
           <div class="form">
@@ -122,7 +152,7 @@
               <h3 class="text-center">ADMISSIONS OPEN FOR 2024</h3>
             </div>
             <form
-              action="https://www.collegecharcha.co.in/mail.php"
+              action="http://localhost:3000/api/register"
               method="POST"
             >
               <input
@@ -144,14 +174,13 @@
                 placeholder="Mobile Number"
               />
               <div class="control-group">
-                <select name="course" class="custom-select">
-                  <option selected="">Choose a Course</option>
-                  <option value="1">MBA</option>
-                  <option value="2">PGDBM</option>
-                  <option value="3">B.Tech</option>
+                <select name="hero" class="custom-select">
+                  <option selected="">Choose a College</option>
+                  <option value="GL">GL Bajaj</option>
+                  <option value="Bennett">Bennett University</option>
+                  <option value="IILM">IILM University</option>
                 </select>
               </div>
-              <!--<textarea class="form-control" placeholder="Comment"></textarea>-->
               <button class="btn btn-block">Register</button>
             </form>
           </div>
@@ -161,19 +190,18 @@
 
       <!-- Social Media starts -->
       <div id="social-links">
-        <a href="#" target="_blank" style="background-color: #25d366;"
+        <a href="tel:+919311236933" target="_blank" style="background-color: #25d366;"
           ><i class="fa fa-phone-alt"></i><span>Call</span></a
         >
-        <a href="#" target="_blank" style="background-color: #ff8113;"
+        <a href="mailto:info@collegecharcha.co.in" target="_blank" style="background-color: #ff8113;"
           ><i class="fa fa-envelope"></i><span>Email</span></a
         >
-        <!-- info@collegecharcha.co.in -->
-        <a href="#" target="_blank" style="background-color: #0077b5;"
+        <a href="https://www.linkedin.com/in/college-charcha-328a41256/" target="_blank" style="background-color: #0077b5;"
           ><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a
         >
-        <a href="#" target="_blank" style="background-color: #CD201F;"><i class="fab fa-youtube"></i><span>YouTube</span></a>
+        <a href="https://www.youtube.com/@collegecharcha" target="_blank" style="background-color: #CD201F;"><i class="fab fa-youtube"></i><span>YouTube</span></a>
         
-        <a href="#" target="_blank" style="background-color: #1877F2;"
+        <a href="https://www.facebook.com/profile.php?id=100093281640759" target="_blank" style="background-color: #1877F2;"
           ><i class="fab fa-facebook-f"></i><span>Facebook</span></a
         >
       </div>
@@ -194,10 +222,9 @@
               <div class="service-item">
                 <img src="./assets/images/glbajaj.webp" alt="Service" />
                 <h3>GL Bajaj</h3>
-                <p>
-                  Management degrees give students a broad foundation in topics
-                  relating to business, finance, economics and marketing.
-                </p>
+                <p>58 LACS Highest salary package</p>
+                <p>50 course programs</p>
+                <p>195 NIRF Ranking</p>
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
@@ -212,15 +239,13 @@
               <div class="service-item">
                 <img src="./assets/images/iilm.jpg" alt="Service" />
                 <h3>IILM University</h3>
-                <p>
-                  Engineering is the designing, testing and building of
-                  machines, structures and processes using maths and science.
-                </p>
+                <p>20 Lacs INR highest placement package</p>
+                <p>8.6 Lacs INR average placement package</p>
               </div>
             </div>
           </div>
           <div class="text-center">
-            <button class="btn">GET A CALL</button>
+            <button class="btn" onclick="openPopup()">GET A CALL</button>
           </div>
         </div>
       </div>
@@ -309,7 +334,7 @@
                   <div class="testimonial-item">
                     <div class="testimonial-img">
                       <img
-                        src="./College Charcha_files/testimonial-2.jpg"
+                        src="./files/testimonial-2.jpg"
                         alt=""
                       />
                     </div>
@@ -328,7 +353,7 @@
                   <div class="testimonial-item">
                     <div class="testimonial-img">
                       <img
-                        src="./College Charcha_files/testimonial-3.jpg"
+                        src="./files/testimonial-3.jpg"
                         alt=""
                       />
                     </div>
@@ -347,7 +372,7 @@
                   <div class="testimonial-item">
                     <div class="testimonial-img">
                       <img
-                        src="./College Charcha_files/testimonial-4.jpg"
+                        src="./files/testimonial-4.jpg"
                         alt=""
                       />
                     </div>
@@ -365,7 +390,7 @@
                   <div class="testimonial-item">
                     <div class="testimonial-img">
                       <img
-                        src="./College Charcha_files/testimonial-1.jpg"
+                        src="./files/testimonial-1.jpg"
                         alt=""
                       />
                     </div>
@@ -384,7 +409,7 @@
                   <div class="testimonial-item">
                     <div class="testimonial-img">
                       <img
-                        src="./College Charcha_files/testimonial-2.jpg"
+                        src="./files/testimonial-2.jpg"
                         alt=""
                       />
                     </div>
@@ -403,7 +428,7 @@
                   <div class="testimonial-item">
                     <div class="testimonial-img">
                       <img
-                        src="./College Charcha_files/testimonial-3.jpg"
+                        src="./files/testimonial-3.jpg"
                         alt=""
                       />
                     </div>
@@ -443,7 +468,7 @@
             <div class="col-md-6">
               <div class="contact-form">
                 <form
-                  action="https://www.collegecharcha.co.in/mail.php"
+                  action="http://localhost:3000/api/contactus"
                   method="POST"
                 >
                   <div class="form-row">
@@ -546,7 +571,7 @@
                   and upcoming endeavors.
                 </p>
                 <form
-                  action="https://www.collegecharcha.co.in/mail1.php"
+                  action='http://localhost:3000/api/newsletter'
                   method="POST"
                 >
                   <input
@@ -583,14 +608,15 @@
     </div>
 
     <!-- JavaScript Libraries -->
-    <script src="./College Charcha_files/jquery-3.4.1.min.js.download"></script>
-    <script src="./College Charcha_files/bootstrap.bundle.min.js.download"></script>
-    <script src="./College Charcha_files/easing.min.js.download"></script>
-    <script src="./College Charcha_files/owl.carousel.min.js.download"></script>
-    <script src="./College Charcha_files/isotope.pkgd.min.js.download"></script>
-    <script src="./College Charcha_files/lightbox.min.js.download"></script>
+    <script src="./files/jquery-3.4.1.min.js.download"></script>
+    <script src="./files/bootstrap.bundle.min.js.download"></script>
+    <script src="./files/easing.min.js.download"></script>
+    <script src="./files/owl.carousel.min.js.download"></script>
+    <script src="./files/isotope.pkgd.min.js.download"></script>
+    <script src="./files/lightbox.min.js.download"></script>
 
     <!-- Template Javascript -->
-    <script src="./College Charcha_files/main.js.download"></script>
+    <script src="./files/main.js.download"></script>
+    <script src="script.js"></script>
   </body>
 </html>

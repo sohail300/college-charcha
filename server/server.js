@@ -1,0 +1,161 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
+const nodemailer = require('nodemailer');
+const dotenv = require('dotenv');
+
+dotenv.config();
+
+const app = express();
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+const dbURL=process.env.DB_URL;
+async function connectDB() {
+    console.log(dbURL)
+  try {
+    const uri = dbURL;
+    await mongoose.connect(uri);
+    console.log("Database connected");
+  } catch (err) {
+    console.log("Error connecting to DB: " + err);
+  }
+}
+connectDB();
+
+const Register = mongoose.model('Register', {
+    name: String,
+    email: String,
+    phone: String,
+    hero: String
+});
+
+const GetACall = mongoose.model('GetACall', {
+    name: String,
+    phone: String,
+});
+
+const Newsletter = mongoose.model('Newsletter', {
+    email: String,
+});
+
+const Contact = mongoose.model('Contact', {
+    name: String,
+    email: String,
+    phone: String,
+    course: String
+});
+
+const transporter = nodemailer.createTransport({
+    host: process.env.MAIL_HOST,
+    port: process.env.MAIL_PORT,
+    secure: false, // true for 465, false for other ports
+    auth: {
+        user: process.env.MAIL_ADDRESS,
+        pass: process.env.MAIL_PASSWORD,
+    },
+});
+
+const backend=process.env.BACKEND_URL;
+
+app.get('/', (req, res) => {
+    res.send('Root Page');
+});
+
+app.post(`/api/register`, async (req, res) => {
+    try {
+        console.log(req.body);
+        console.log(req.body.hero);
+        const registerData = new Register(req.body);
+        await registerData.save();
+
+        const info = await transporter.sendMail({
+            from: `Landing Page Email <ekaksha2001@gmail.com>`,
+            to: 'info@collegecharcha.co.in'
+
+    ,
+            subject: "Register",
+            text: `Name: ${registerData.name}\nEmail: ${registerData.email}\nPhone: ${registerData.phone}\nCourse: ${registerData.hero}\n`,
+        });
+
+        console.log("Message sent:", info.messageId);
+        res.send('Form submitted successfully!');
+    } catch (error) {
+        console.error('Error processing form submission:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+app.post('/api/getacall', async (req, res) => {
+    try {
+        console.log(req.body);
+        const getACallData = new GetACall(req.body);
+        await getACallData.save();
+
+        const info = await transporter.sendMail({
+            from: `Landing Page Email <ekaksha2001@gmail.com>`,
+            to: 'info@collegecharcha.co.in'
+
+    ,
+            subject: "Get A Call",
+            text: `Name: ${getACallData.name}\nPhone: ${getACallData.phone}\n`,
+        });
+
+        console.log("Message sent:", info.messageId);
+        res.send('Form submitted successfully!');
+    } catch (error) {
+        console.error('Error processing form submission:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+app.post('/api/newsletter', async (req, res) => {
+    try {
+        console.log(req.body);
+        const newsletterData = new Newsletter(req.body);
+        await newsletterData.save();
+
+        const info = await transporter.sendMail({
+            from: `Landing Page Email <ekaksha2001@gmail.com>`,
+            to: 'info@collegecharcha.co.in'
+
+    ,
+            subject: "Newsletter",
+            text: `Email: ${newsletterData.email}\n`,
+        });
+
+        console.log("Message sent:", info.messageId);
+        res.send('Form submitted successfully!');
+    } catch (error) {
+        console.error('Error processing form submission:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+app.post('/api/contactus',  async (req, res) => {
+    try {
+        console.log(req.body);
+        const contactData = new Contact(req.body);
+        await contactData.save();
+
+        const info = await transporter.sendMail({
+            from: `Landing Page Email <ekaksha2001@gmail.com>`,
+            to: 'info@collegecharcha.co.in'
+
+    ,
+            subject: "Contact Us",
+            text: `Name: ${contactData.name}\nEmail: ${contactData.email}\nPhone: ${contactData.phone}\nMessage: ${contactData.course}\n`,
+        });
+
+        console.log("Message sent:", info.messageId);
+        res.send('Form submitted successfully!');
+    } catch (error) {
+        console.error('Error processing form submission:', error);
+        res.status(500).send('Internal Server Error');
+    }
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
