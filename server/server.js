@@ -71,7 +71,7 @@ app.post(`/api/register`, async (req, res) => {
 
         const info = await transporter.sendMail({
             from: `Landing Page Email <ekaksha2001@gmail.com>`,
-            to: 'info@collegecharcha.co.in'
+            to: 'admissionguidance.gn@gmail.com'
 
     ,
             subject: "Register",
@@ -94,7 +94,7 @@ app.post('/api/getacall', async (req, res) => {
 
         const info = await transporter.sendMail({
             from: `Landing Page Email <ekaksha2001@gmail.com>`,
-            to: 'info@collegecharcha.co.in'
+            to: 'admissionguidance.gn@gmail.com'
 
     ,
             subject: "Get A Call",
@@ -117,7 +117,7 @@ app.post('/api/newsletter', async (req, res) => {
 
         const info = await transporter.sendMail({
             from: `Landing Page Email <ekaksha2001@gmail.com>`,
-            to: 'info@collegecharcha.co.in'
+            to: 'admissionguidance.gn@gmail.com'
 
     ,
             subject: "Newsletter",
@@ -139,7 +139,7 @@ app.post('/api/contactus',  async (req, res) => {
 
         const info = await transporter.sendMail({
             from: `Landing Page Email <ekaksha2001@gmail.com>`,
-            to: 'info@collegecharcha.co.in'
+            to: 'admissionguidance.gn@gmail.com'
 
     ,
             subject: "Contact Us",
