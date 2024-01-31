@@ -13,7 +13,6 @@ app.use(bodyParser.json());
 
 const dbURL=process.env.DB_URL;
 async function connectDB() {
-    console.log(dbURL)
   try {
     const uri = dbURL;
     await mongoose.connect(uri);

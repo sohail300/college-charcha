@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
     <!-- Favicon -->
-    <link href="https://www.collegecharcha.co.in/img/favicon.ico" rel="icon" />
+    <link href="" rel="icon" />
 
     <!-- Google Font -->
     <link href="./files/css2" rel="stylesheet" />
@@ -40,7 +40,7 @@
   </head>
 
   <body>
-    <div class="wrapper" id="landing-page">
+    <div class="wrapper border border-danger " id="landing-page">
       <!-- Header Start -->
       <div class="header home">
         <div class="container-fluid">
@@ -54,7 +54,6 @@
             <div class="col-lg-9">
               <div class="navbar navbar-expand-lg bg-light navbar-light">
                 <a
-                  href="https://www.collegecharcha.co.in/#"
                   class="navbar-brand"
                   >MENU</a
                 >
@@ -109,33 +108,8 @@
       </div>
       <!-- Navbar ends -->
 
-      <!-- Popup starts -->
-      <div class="popup" id="callPopup">
-        <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <h2>Request a Call</h2>
-            <p>Fill out the form below to request a call:</p>
-            
-            <!-- Your form fields go here -->
-            <form action="https://college-charcha.onrender.com/api/getacall" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-
-                <br>
-
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
-
-                <br>
-
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-      <!-- Popup ends -->
-
       <!-- Hero Starts -->
-      <div class="hero d-flex align-items-center">
+      <div class="hero row">
         <div class="col-md-7">
           <h2>Best &amp; Trusted</h2>
           <h2><span>College</span> Consultant</h2>
@@ -187,6 +161,31 @@
         </div>
       </div>
       <!-- Hero End -->
+      
+      <!-- Popup starts -->
+      <div class="popup" id="callPopup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">&times;</span>
+            <h2>Request a Call</h2>
+            <p>Fill out the form below to request a call:</p>
+            
+            <!-- Your form fields go here -->
+            <form action="https://college-charcha.onrender.com/api/getacall" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <br>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <br>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+      <!-- Popup ends -->
 
       <!-- Social Media starts -->
       <div id="social-links">
@@ -217,7 +216,7 @@
           <div class="section-header">
             <h2>Consultancy Services</h2>
           </div>
-          <div class="d-flex justify-content-between">
+          <div class="row">
             <div class="col-lg-3 col-md-6">
               <div class="service-item">
                 <img src="./assets/images/glbajaj.webp" alt="Service" />
@@ -290,7 +289,7 @@
           <div class="section-header">
             <h2>Why Choose Us</h2>
           </div>
-          <div class="d-flex justify-content-between">
+          <div class="row">
             <div class="glass-card">
               <div class="content">
                 <h2>Expert Counceller</h2>
@@ -521,9 +520,9 @@
       <!-- Contact End -->
 
       <!-- Footer Start -->
-      <div class="footer">
+      <div class="footer w-100">
         <div class="container">
-          <div class="d-flex flex-row justify-content-between">
+          <div class="row">
             <div class="col-md-6 col-lg-3">
               <div class="footer-contact">
                 <h2>Get In Touch</h2>
@@ -596,7 +595,7 @@
             <div class="col-md-6">
               <p>
                 Designed By
-                <a href="https://collegecharcha.co.in/"
+                <a
                   >collegecharcha.co.in/</a
                 >
               </p>
