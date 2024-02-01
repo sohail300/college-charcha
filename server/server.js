@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
+const path = require('path');
 
 dotenv.config();
 
@@ -12,6 +13,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const dbURL=process.env.DB_URL;
+console.log(dbURL)
 async function connectDB() {
   try {
     const uri = dbURL;
@@ -56,8 +58,6 @@ const transporter = nodemailer.createTransport({
     },
 });
 
-const backend=process.env.BACKEND_URL;
-
 app.get('/', (req, res) => {
     res.send('Root Page');
 });
@@ -70,7 +70,7 @@ app.post(`/api/register`, async (req, res) => {
         await registerData.save();
 
         const info = await transporter.sendMail({
-            from: `Landing Page Email <ekaksha2001@gmail.com>`,
+            from: `Landing Page Email <charchacollege@gmail.com>`,
             to: 'admissionguidance.gn@gmail.com'
 
     ,
@@ -79,7 +79,7 @@ app.post(`/api/register`, async (req, res) => {
         });
 
         console.log("Message sent:", info.messageId);
-        res.send('Form submitted successfully!');
+        res.sendFile(path.join(__dirname, '../thankyou.html'));
     } catch (error) {
         console.error('Error processing form submission:', error);
         res.status(500).send('Internal Server Error');
@@ -93,7 +93,7 @@ app.post('/api/getacall', async (req, res) => {
         await getACallData.save();
 
         const info = await transporter.sendMail({
-            from: `Landing Page Email <ekaksha2001@gmail.com>`,
+            from: `Landing Page Email <charchacollege@gmail.com>`,
             to: 'admissionguidance.gn@gmail.com'
 
     ,
@@ -102,7 +102,7 @@ app.post('/api/getacall', async (req, res) => {
         });
 
         console.log("Message sent:", info.messageId);
-        res.send('Form submitted successfully!');
+        res.sendFile(path.join(__dirname, '../thankyou.html'));
     } catch (error) {
         console.error('Error processing form submission:', error);
         res.status(500).send('Internal Server Error');
@@ -116,7 +116,7 @@ app.post('/api/newsletter', async (req, res) => {
         await newsletterData.save();
 
         const info = await transporter.sendMail({
-            from: `Landing Page Email <ekaksha2001@gmail.com>`,
+            from: `Landing Page Email <charchacollege@gmail.com>`,
             to: 'admissionguidance.gn@gmail.com'
 
     ,
@@ -125,7 +125,7 @@ app.post('/api/newsletter', async (req, res) => {
         });
 
         console.log("Message sent:", info.messageId);
-        res.send('Form submitted successfully!');
+        res.sendFile(path.join(__dirname, '../thankyou.html'));
     } catch (error) {
         console.error('Error processing form submission:', error);
         res.status(500).send('Internal Server Error');
@@ -138,7 +138,7 @@ app.post('/api/contactus',  async (req, res) => {
         await contactData.save();
 
         const info = await transporter.sendMail({
-            from: `Landing Page Email <ekaksha2001@gmail.com>`,
+            from: `Landing Page Email <charchacollege@gmail.com>`,
             to: 'admissionguidance.gn@gmail.com'
 
     ,
@@ -147,7 +147,7 @@ app.post('/api/contactus',  async (req, res) => {
         });
 
         console.log("Message sent:", info.messageId);
-        res.send('Form submitted successfully!');
+        res.sendFile(path.join(__dirname, '../thankyou.html'));
     } catch (error) {
         console.error('Error processing form submission:', error);
         res.status(500).send('Internal Server Error');

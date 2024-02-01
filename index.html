@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NW23G3X2");
+    </script>
+    <!-- End Google Tag Manager -->
+
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <title>College Charcha</title>
@@ -15,10 +30,7 @@
     <!-- CSS Libraries -->
     <link href="./files/bootstrap.min.css" rel="stylesheet" />
     <link href="./files/all.min.css" rel="stylesheet" />
-    <link
-      href="./files/owl.carousel.min.css"
-      rel="stylesheet"
-    />
+    <link href="./files/owl.carousel.min.css" rel="stylesheet" />
     <link href="./files/lightbox.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
@@ -40,7 +52,18 @@
   </head>
 
   <body>
-    <div class="wrapper border border-danger " id="landing-page">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NW23G3X2"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="wrapper" id="landing-page">
       <!-- Header Start -->
       <div class="header home">
         <div class="container-fluid">
@@ -53,10 +76,7 @@
             </div>
             <div class="col-lg-9">
               <div class="navbar navbar-expand-lg bg-light navbar-light">
-                <a
-                  class="navbar-brand"
-                  >MENU</a
-                >
+                <a class="navbar-brand">MENU</a>
                 <button
                   type="button"
                   class="navbar-toggler"
@@ -71,34 +91,16 @@
                   id="navbarCollapse"
                 >
                   <div class="navbar-nav ml-auto">
-                    <a
-                      href="#landing-page"
-                      class="nav-item nav-link active"
+                    <a href="#landing-page" class="nav-item nav-link active"
                       >Home</a
                     >
-                    <a
-                      href="#course"
-                      class="nav-item nav-link"
-                      >Services</a
-                    >
-                    <a
-                      href="#about"
-                      class="nav-item nav-link"
-                      >About</a
-                    >
-                    <a
-                      href="#feature"
-                      class="nav-item nav-link"
+                    <a href="#course" class="nav-item nav-link">Services</a>
+                    <a href="#about" class="nav-item nav-link">About</a>
+                    <a href="#feature" class="nav-item nav-link"
                       >Why Choose Us</a
                     >
-                    <a
-                      href="#contact"
-                      class="nav-item nav-link"
-                      >Contact</a
-                    >
-                    <a class="btn" onclick="openPopup()"
-                      >Get A Call</a
-                    >
+                    <a href="#contact" class="nav-item nav-link">Contact</a>
+                    <a class="btn" onclick="openPopup()">Get A Call</a>
                   </div>
                 </div>
               </div>
@@ -161,48 +163,43 @@
         </div>
       </div>
       <!-- Hero End -->
-      
+
       <!-- Popup starts -->
       <div class="popup" id="callPopup">
         <div class="popup-content">
-            <span class="close-btn" onclick="closePopup()">&times;</span>
-            <h2>Request a Call</h2>
-            <p>Fill out the form below to request a call:</p>
-            
-            <!-- Your form fields go here -->
-            <form action="https://college-charcha.onrender.com/api/getacall" method="POST">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h2>Request a Call</h2>
+          <p>Fill out the form below to request a call:</p>
 
-                <br>
+          <!-- Your form fields go here -->
+          <form
+            action="https://college-charcha.onrender.com/api/getacall"
+            method="POST"
+          >
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
 
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required>
+            <br />
 
-                <br>
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required />
 
-                <button type="submit">Submit</button>
-            </form>
+            <br />
+
+            <button type="submit">Submit</button>
+          </form>
         </div>
-    </div>
+      </div>
       <!-- Popup ends -->
 
       <!-- Social Media starts -->
       <div id="social-links">
-        <a href="tel:+919311236933" target="_blank" style="background-color: #25d366;"
+        <a
+          href="tel:+919311236933"
+          target="_blank"
+          style="background-color: #25d366"
           ><i class="fa fa-phone-alt"></i><span>Call</span></a
         >
-        <!-- <a href="mailto:admissionguidance.gn@gmail.com" target="_blank" style="background-color: #ff8113;"
-          ><i class="fa fa-envelope"></i><span>Email</span></a
-        >
-        <a href="https://www.linkedin.com/in/college-charcha-328a41256/" target="_blank" style="background-color: #0077b5;"
-          ><i class="fab fa-linkedin-in"></i><span>LinkedIn</span></a
-        >
-        <a href="https://www.youtube.com/@collegecharcha" target="_blank" style="background-color: #CD201F;"><i class="fab fa-youtube"></i><span>YouTube</span></a>
-        
-        <a href="https://www.facebook.com/profile.php?id=100093281640759" target="_blank" style="background-color: #1877F2;"
-          ><i class="fab fa-facebook-f"></i><span>Facebook</span></a
-        > -->
       </div>
 
       <!-- Social Media ends -->
@@ -531,27 +528,50 @@
                   View Plaza, Alpha-I Commercial Belt, Greater Noida, Uttar
                   Pradesh 201306
                 </p>
-                <a href="tel:9311236933"><i class="fa fa-phone-alt"></i>9311236933</a>
-                <a href="tel:9310902744"><i class="fa fa-phone-alt"></i>9310902744</a>
-                <a href="tel:9540936933"><i class="fa fa-phone-alt"></i>9540936933</a>
-                <a href="tel:8595360357"><i class="fa fa-phone-alt"></i>8595360357</a>
-                <a href="tel:9971550018"><i class="fa fa-phone-alt"></i>9971550018</a>
-                <a href="tel:7042732638"><i class="fa fa-phone-alt"></i>7042732638</a>
-                <a href="mailto:admissionguidance.gn@gmail.com"><i class="fa fa-envelope"></i>admissionguidance.gn@gmail.com</a>
+                <a href="tel:9311236933"
+                  ><i class="fa fa-phone-alt"></i>9311236933</a
+                >
+                <a href="tel:9310902744"
+                  ><i class="fa fa-phone-alt"></i>9310902744</a
+                >
+                <a href="tel:9540936933"
+                  ><i class="fa fa-phone-alt"></i>9540936933</a
+                >
+                <a href="tel:8595360357"
+                  ><i class="fa fa-phone-alt"></i>8595360357</a
+                >
+                <a href="tel:9971550018"
+                  ><i class="fa fa-phone-alt"></i>9971550018</a
+                >
+                <a href="tel:7042732638"
+                  ><i class="fa fa-phone-alt"></i>7042732638</a
+                >
+                <a href="mailto:admissionguidance.gn@gmail.com"
+                  ><i class="fa fa-envelope"></i
+                  >admissionguidance.gn@gmail.com</a
+                >
                 <div class="footer-social">
                   <a href="https://twitter.com/collegecharcha" target="_blank"
                     ><i class="fab fa-twitter"></i
                   ></a>
-                  <a href="https://www.facebook.com/profile.php?id=100093281640759" target="_blank"
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100093281640759"
+                    target="_blank"
                     ><i class="fab fa-facebook-f"></i
                   ></a>
-                  <a href="https://www.youtube.com/@collegecharcha" target="_blank"
+                  <a
+                    href="https://www.youtube.com/@collegecharcha"
+                    target="_blank"
                     ><i class="fab fa-youtube"></i
                   ></a>
-                  <a href="https://www.instagram.com/collegecharcha/" target="_blank"
+                  <a
+                    href="https://www.instagram.com/collegecharcha/"
+                    target="_blank"
                     ><i class="fab fa-instagram"></i
                   ></a>
-                  <a href="https://www.linkedin.com/in/college-charcha-328a41256/" target="_blank"
+                  <a
+                    href="https://www.linkedin.com/in/college-charcha-328a41256/"
+                    target="_blank"
                     ><i class="fab fa-linkedin-in"></i
                   ></a>
                 </div>
@@ -575,7 +595,7 @@
                   and upcoming endeavors.
                 </p>
                 <form
-                  action='https://college-charcha.onrender.com/api/newsletter'
+                  action="https://college-charcha.onrender.com/api/newsletter"
                   method="POST"
                 >
                   <input
@@ -600,8 +620,10 @@
             <div class="col-md-6">
               <p>
                 Designed By
-                <a href="https://github.com/sohail300" target="_blank">Sohail</a
-                > with 💗
+                <a href="https://github.com/sohail300" target="_blank"
+                  >Sohail</a
+                >
+                with 💗
               </p>
             </div>
           </div>
