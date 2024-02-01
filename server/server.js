@@ -74,7 +74,7 @@ app.post(`/api/register`, async (req, res) => {
 
         const info = await transporter.sendMail({
             from: `Landing Page Email <charchacollege@gmail.com>`,
-            to: 'md.sohail.ansari999@gmail.com',
+            to: 'admissionguidance.gn@gmail.com',
             subject: "Register",
             text: `Name: ${registerData.name}\nEmail: ${registerData.email}\nPhone: ${registerData.phone}\nCourse: ${registerData.hero}\n`,
         });
