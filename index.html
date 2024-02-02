@@ -122,14 +122,16 @@
           <a class="btn" onclick="openPopup()">Enroll Now</a>
         </div>
         <div class="col-md-5">
-          <div class="form">
+          <div class="form" id="'register-form">
             <div>
               <h3 class="text-center">REGISTER NOW</h3>
               <h3 class="text-center">ADMISSIONS OPEN FOR 2024</h3>
             </div>
             <form
-              action="https://college-charcha.onrender.com/api/register"
+              action="https://college-charcha-2il6.onrender.com/api/register"
               method="POST"
+              id="register-form"
+            onsubmit="submitForm(event)"
             >
               <input
                 name="name"
@@ -173,8 +175,10 @@
 
           <!-- Your form fields go here -->
           <form
-            action="https://college-charcha.onrender.com/api/getacall"
+            action="https://college-charcha-2il6.onrender.com/api/getacall"
             method="POST"
+            id="getacall-form"
+            onsubmit="submitForm(event)"
           >
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required />
@@ -215,7 +219,7 @@
           </div>
           <div class="row">
             <div class="col-lg-3 col-md-6">
-              <div class="service-item">
+              <div class="service-item" id='glbajaj' onclick="openGlbajajPage()">
                 <img src="./assets/images/glbajaj.webp" alt="Service" />
                 <h3>GL Bajaj</h3>
                 <p>58 LACS Highest salary package</p>
@@ -224,7 +228,7 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
-              <div class="service-item">
+              <div class="service-item" id='bennett' onclick="openBennettPage()">
                 <img src="./assets/images/bennett.webp" alt="Service" />
                 <h3>Bennett University</h3>
                 <p>No. 1 Best Emerging University</p>
@@ -232,7 +236,7 @@
               </div>
             </div>
             <div class="col-lg-3 col-md-6">
-              <div class="service-item">
+              <div class="service-item" id='iilm' onclick="openIILMPage()">
                 <img src="./assets/images/iilm.jpg" alt="Service" />
                 <h3>IILM University</h3>
                 <p>20 Lacs INR highest placement package</p>
@@ -319,136 +323,6 @@
         </div>
       </div>
 
-      <!-- Testimonial Start -->
-      <!-- <div class="testimonial">
-        <div class="container">
-          <div class="section-header">
-            <h2>Customer Testimonials</h2>
-          </div>
-          <div class="d-flex flex-row ">
-                <div class="owl-item cloned" style="width: 370px">
-                  <div class="testimonial-item">
-                    <div class="testimonial-img">
-                      <img
-                        src="./files/testimonial-2.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="testimonial-content">
-                      <p>
-                        It's just require strong patience, a boost of passion
-                        and a zeal to bring happiness in your parents life and
-                        face of your well wishers.
-                      </p>
-                      <h3>Sooma</h3>
-                      <h4>B.Tech(EE)</h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="owl-item cloned" style="width: 370px">
-                  <div class="testimonial-item">
-                    <div class="testimonial-img">
-                      <img
-                        src="./files/testimonial-3.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="testimonial-content">
-                      <p>
-                        It's an awesome feeling to get selected in the worlds
-                        no.1 IT giant,It's just require strong patience, a boost
-                        of passion
-                      </p>
-                      <h3>Rohan</h3>
-                      <h4>B.Tech(EC)</h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="owl-item cloned" style="width: 370px">
-                  <div class="testimonial-item">
-                    <div class="testimonial-img">
-                      <img
-                        src="./files/testimonial-4.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="testimonial-content">
-                      <p>
-                        Believed in developing young people with a strong sense
-                        of self-worth, knowledge and self-discipline.
-                      </p>
-                      <h3>Julli</h3>
-                      <h4>MBA</h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="owl-item active" style="width: 370px">
-                  <div class="testimonial-item">
-                    <div class="testimonial-img">
-                      <img
-                        src="./files/testimonial-1.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="testimonial-content">
-                      <p>
-                        Phenomenal faculties helped me to discover my true
-                        potential and have given me opportunities which have
-                        helped me to prepare for the future.
-                      </p>
-                      <h3>Sushant Singh</h3>
-                      <h4>B.Tech(EC)</h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="owl-item active" style="width: 370px">
-                  <div class="testimonial-item">
-                    <div class="testimonial-img">
-                      <img
-                        src="./files/testimonial-2.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="testimonial-content">
-                      <p>
-                        It's just require strong patience, a boost of passion
-                        and a zeal to bring happiness in your parents life and
-                        face of your well wishers.
-                      </p>
-                      <h3>Sooma</h3>
-                      <h4>B.Tech(EE)</h4>
-                    </div>
-                  </div>
-                </div>
-                <div class="owl-item active" style="width: 370px">
-                  <div class="testimonial-item">
-                    <div class="testimonial-img">
-                      <img
-                        src="./files/testimonial-3.jpg"
-                        alt=""
-                      />
-                    </div>
-                    <div class="testimonial-content">
-                      <p>
-                        It's an awesome feeling to get selected in the worlds
-                        no.1 IT giant,It's just require strong patience, a boost
-                        of passion
-                      </p>
-                      <h3>Rohan</h3>
-                      <h4>B.Tech(EC)</h4>
-                    </div>
-                  </div>
-                </div>
-        </div>
-        <div class="owl-nav disabled">
-          <span class="owl-prev">prev</span>
-          <span class="owl-dot active"><span></span></span>
-          <span class="owl-next">next</span>
-          <span class="owl-dot"><span></span></span>
-        </div>
-      </div> -->
-      <!-- Testimonial End -->
-
       <!-- Contact Start -->
       <div id="contact" class="contact">
         <div class="container">
@@ -464,8 +338,11 @@
             <div class="col-md-6">
               <div class="contact-form">
                 <form
-                  action="https://college-charcha.onrender.com/api/contactus"
+                  action="https://college-charcha-2il6.onrender.com/api/contactus"
                   method="POST"
+                  id="'contact-form"
+            onsubmit="submitForm(event)"
+
                 >
                   <div class="form-row">
                     <div class="form-group col-md-6">
@@ -595,8 +472,11 @@
                   and upcoming endeavors.
                 </p>
                 <form
-                  action="https://college-charcha.onrender.com/api/newsletter"
+                  action="https://college-charcha-2il6.onrender.com/api/newsletter"
                   method="POST"
+                  id="newsletter-form"
+            onsubmit="submitForm(event)"
+
                 >
                   <input
                     name="email"
