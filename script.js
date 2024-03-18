@@ -9,18 +9,31 @@ function closePopup() {
 const glbajaj=document.getElementById('glbabaj');
 
 function openGlbajajPage(){
-    console.log('inside gl');
     window.location.href = 'GLBajaj.html';
 }
 
 function openBennettPage(){
-    console.log('inside bennett');
     window.location.href = 'Bennett.html';
 }
 
 function openIILMPage(){
-    console.log('inside IILM');
     window.location.href = 'IILM.html';
+}
+
+function openAmityPage(){
+    window.location.href = 'Amity.html';
+}
+
+function openGalgotiasPage(){
+    window.location.href = 'Galgotias.html';
+}
+
+function openJaypeePage(){
+    window.location.href = 'Jaypee.html';
+}
+
+function openJSSPage(){
+    window.location.href = 'JSS.html';
 }
 
 function submitForm(event) {
