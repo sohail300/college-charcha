@@ -229,6 +229,41 @@ button:hover {
   background-size: cover;
 }
 
+.header .topbar {
+  position: relative;
+  text-align: right;
+}
+
+.header .topbar .topbar-col {
+  display: inline-block;
+  padding: 0 15px;
+  margin-bottom: 15px;
+}
+
+.header .topbar-col a {
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.header .topbar-col a i {
+  margin-right: 10px;
+  color: #ffd662;
+}
+
+.header .topbar-social {
+  position: relative;
+}
+
+.header .topbar-social a {
+  display: inline-block;
+}
+
+.header .topbar-social a i {
+  margin-right: 10px;
+  font-size: 18px;
+  color: #ffffff;
+}
+
 @media (min-width: 992px) {
   .header .row {
     padding: 0 60px;
@@ -550,6 +585,7 @@ button:hover {
   border-radius: 10px;
   margin-top: 15px;
   aspect-ratio: 3/2;
+  object-fit: cover;
 }
 
 .content h2 {
@@ -577,11 +613,12 @@ button:hover {
 }
 
 /*********** Why Choose Us CSS **********/
-.why-choose-us img {
+.responsive-container img {
   height: 10rem;
   width: auto;
   margin-right: 2rem;
   border-radius: 8px;
+  object-fit: cover;
 }
 
 .why-choose-us h2 {
