@@ -1,0 +1,93 @@
+/******* Hero Section ********/
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 40px;
+  }
+
+  #register-form h3 {
+    font-size: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+  }
+
+  .hero-intro {
+    text-align: center;
+  }
+}
+
+/******* About us Section ********/
+
+@media (max-width: 1200px) {
+  .about h2 {
+    font-size: 40px;
+  }
+
+  .about-text h2 {
+    font-size: 30px;
+  }
+
+  .about .about-text h2 span {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about h2 {
+    font-size: 32px;
+  }
+
+  .about-text h2 {
+    font-size: 24px;
+  }
+
+  .about .about-text h2 span {
+    font-size: 40px;
+  }
+}
+
+/******* Section Header ********/
+@media (max-width: 576px) {
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+}
+
+.responsive-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+@media (max-width: 576px) {
+  .responsive-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .why-choose-us img {
+    width: 100%;
+    height: auto;
+  }
+
+  .text-content h3 {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-choose-us h2 {
+    font-size: 40px;
+  }
+
+  .why-choose-us h3 {
+    font-size: 20px;
+  }
+}

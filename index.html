@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>College Charcha</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <!-- Favicon -->
+    <link href="./cc-logo.jpg" rel="icon" />
+
+    <!-- Google Font -->
+    <link href="./files/css2" rel="stylesheet" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- CSS Libraries -->
+    <link href="./files/bootstrap.min.css" rel="stylesheet" />
+    <link href="./files/all.min.css" rel="stylesheet" />
+    <link href="./files/lightbox.min.css" rel="stylesheet" />
+    <link href="./files/owl.carousel.min.css" rel="stylesheet" />
+    <link href="./files/owl.theme.default.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="./assets/style.css" rel="stylesheet" />
+    <link href="./assets/responsive.css" rel="stylesheet" />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com/"
+      crossorigin="use-credentials"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" />
+    <link rel="stylesheet" href="./files/css2(1)" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/202c49b15c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="wrapper" id="landing-page">
+      <!-- Popup starts -->
+      <div class="popup" id="callPopup">
+        <div class="popup-content">
+          <span class="close-btn" onclick="closePopup()">&times;</span>
+          <h2>Request a Call</h2>
+          <p>Fill out the form below to request a call</p>
+
+          <form
+            action="https://college-charcha.onrender.com/api/getacall"
+            method="POST"
+            id="getacall-form"
+            onsubmit="submitForm(event)"
+          >
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required />
+
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <!-- Popup ends -->
+
+      <!-- Social Media starts -->
+      <div id="social-links">
+        <a href="tel:+919311236933" target="_blank"
+          ><i class="fa fa-phone-alt"></i><span>Call</span></a
+        >
+      </div>
+      <!-- Social Media ends -->
+
+      <a href="https://wa.me/9311236933" id="whatsapp-link" target="_blank"
+        ><i class="fa-brands fa-square-whatsapp"></i
+      ></a>
+
+      <!-- Header Start -->
+      <div class="header home">
+        <div class="container-fluid">
+          <!-- Navbar starts -->
+          <div class="header-top row align-items-center fixed-top">
+            <div class="col-lg-3">
+              <div class="brand">
+                <a href="#landing-page"> College Charcha </a>
+              </div>
+            </div>
+            <div class="col-lg-9">
+              <div class="navbar navbar-expand-lg bg-light navbar-light">
+                <a class="navbar-brand">MENU</a>
+                <button
+                  type="button"
+                  class="navbar-toggler"
+                  data-toggle="collapse"
+                  data-target="#navbarCollapse"
+                >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div
+                  class="collapse navbar-collapse justify-content-between"
+                  id="navbarCollapse"
+                >
+                  <div class="navbar-nav ml-auto">
+                    <a href="#landing-page" class="nav-item nav-link active"
+                      >Home</a
+                    >
+                    <a href="#about" class="nav-item nav-link">About</a>
+                    <a href="#feature" class="nav-item nav-link">Our Courses</a>
+                    <a href="#why-choose-us" class="nav-item nav-link"
+                      >Why Choose Us</a
+                    >
+                    <a href="#contact" class="nav-item nav-link">Contact</a>
+                    <a class="btn" onclick="openPopup()">Get A Call</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar ends -->
+
+      <!-- Hero Starts -->
+      <div class="hero row">
+        <div class="col-md-7 mt-5 hero-intro">
+          <h2>Best &amp; Trusted</h2>
+          <h2><span>College</span> Consultant</h2>
+          <p>
+            Building Futuristic Career with us, we are available for your
+            guidance.
+          </p>
+          <a class="btn" onclick="openPopup()">Enroll Now</a>
+        </div>
+        <div class="col-md-5">
+          <div class="form" id="register-form">
+            <div>
+              <h3 class="text-center">REGISTER NOW</h3>
+              <h3 class="text-center">ADMISSIONS OPEN FOR 2024</h3>
+            </div>
+            <form
+              action="https://college-charcha.onrender.com/api/register"
+              method="POST"
+              id="register-form"
+              onsubmit="submitForm(event)"
+            >
+              <input
+                name="name"
+                class="form-control"
+                type="text"
+                placeholder="Your Name"
+              />
+              <input
+                name="email"
+                class="form-control"
+                type="email"
+                placeholder="Your Email"
+              />
+              <input
+                name="phone"
+                class="form-control"
+                type="text"
+                placeholder="Mobile Number"
+              />
+              <div class="control-group">
+                <select name="hero" class="custom-select">
+                  <option selected="">Choose a College</option>
+                  <option value="GL">GL Bajaj</option>
+                  <option value="Bennett">Bennett University</option>
+                  <option value="IILM">IILM University</option>
+                  <option value="Amity">Amity University, Noida</option>
+                  <option value="Galgotias">Galgotias University</option>
+                  <option value="JP">Jaypee Noida</option>
+                  <option value="JSS">JSS Noida</option>
+                </select>
+              </div>
+              <button class="btn btn-block">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- Hero End -->
+
+      <!-- About Start -->
+      <div id="about" class="about">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5 order-2 order-lg-1 order-md-1 col-md-6">
+              <div class="about-img">
+                <img src="./assets/images/about.avif" alt="Image" />
+              </div>
+            </div>
+
+            <div class="col-lg-7 col-md-6 order-1 order-lg-2 order-m-2">
+              <h2>About Us</h2>
+              <div class="about-text">
+                <h2><span>12+</span> Years Experience</h2>
+                <p>
+                  College Charcha is a platform designed to assist students
+                  gearing up for college admissions in the fields of Engineering
+                  and Management.
+                </p>
+                <p>
+                  Our aim is to guide students in selecting the optimal college
+                  and course for their future endeavors. We firmly believe that
+                  every student has the potential to shape a prosperous future
+                  and achieve success in their life.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- About End -->
+
+      <!-- Courses Start -->
+      <div class="feature" id="feature">
+        <div class="container">
+          <div class="section-header">
+            <h2>Courses</h2>
+          </div>
+          <div class="owl-carousel owl-theme">
+            <div class="glass-card item">
+              <div class="content">
+                <h2>MBA</h2>
+                <h3>
+                  Management degrees give students a broad foundation in topics
+                  relating to business, finance, economics and marketing.
+                </h3>
+                <img src="./assets/images/counselling.jpg" alt="Card Image" />
+              </div>
+            </div>
+            <div class="glass-card item">
+              <div class="content">
+                <h2>PGDBM</h2>
+                <h3 class="para">
+                  Management degrees give students a broad foundation in topics
+                  relating to business, finance, economics and marketing.
+                </h3>
+                <img src="./assets/images/best-price.jpg" alt="Card Image" />
+              </div>
+            </div>
+            <div class="glass-card item">
+              <div class="content">
+                <h2>B.Tech</h2>
+                <h3 class="para">
+                  Engineering is the designing, testing and building of
+                  machines, structures and processes using maths and science.
+                </h3>
+                <img src="./assets/images/best-services.jpg" alt="Card Image" />
+              </div>
+            </div>
+            <div class="glass-card item">
+              <div class="content">
+                <h2>BCA/BBA</h2>
+                <h3 class="para">
+                  Graduation is the successful completion of a course of study
+                  at a university, college, for which you receive a degree or
+                  diploma.
+                </h3>
+                <img src="./assets/images/best-services.jpg" alt="Card Image" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why Choose Us Start -->
+      <div id="why-choose-us" class="why-choose-us">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-5">
+              <h2>Why Choose Us</h2>
+              <h3>Expert Counceller and World Class Services</h3>
+              <p>
+                Direct Admission in Top Engineering College and Management
+                Colleges in Delhi NCR. Apply Now
+              </p>
+            </div>
+            <div class="col-lg-7">
+              <div class="responsive-container">
+                <img src="assets/images/contact-us.avif" alt="" />
+                <div class="text-content">
+                  <h3>Expert Counceller</h3>
+                  <p>
+                    Top Enginnering College Admission assistance including
+                    Jaypee, JP Noida, JSS, Bennet, GL Bajaj, NIET, GNIOT, LLOYD,
+                    IILM College.
+                  </p>
+                </div>
+              </div>
+              <div class="responsive-container">
+                <img src="assets/images/contact-us.avif" alt="" />
+                <div class="text-content">
+                  <h3>Reasonable Prices</h3>
+                  <p>Apply Now on UG/PG Programme College At Resonable Fees.</p>
+                </div>
+              </div>
+              <div class="responsive-container">
+                <img src="assets/images/contact-us.avif" alt="" />
+                <div class="text-content">
+                  <h3>Quick & Best Services</h3>
+                  <p>
+                    Talk To our Education Consellor for Best Admission Guidance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Start -->
+      <div id="contact" class="contact">
+        <div class="container">
+          <div class="section-header">
+            <h2>Communicate With Us</h2>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <img src="./assets/images/contact-us.avif" />
+            </div>
+            <div class="col-md-6">
+              <div class="contact-form">
+                <form
+                  action="https://college-charcha.onrender.com/api/contactus"
+                  method="POST"
+                  id="'contact-form"
+                  onsubmit="submitForm(event)"
+                >
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <input
+                        name="name"
+                        type="text"
+                        class="form-control"
+                        placeholder="Your Name"
+                        required="required"
+                      />
+                    </div>
+                    <div class="form-group col-md-6">
+                      <input
+                        name="email"
+                        type="email"
+                        class="form-control"
+                        placeholder="Your Email"
+                        required="required"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input
+                      name="phone"
+                      type="text"
+                      class="form-control"
+                      placeholder="Phone Number"
+                      required="required"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      name="course"
+                      class="form-control"
+                      rows="6"
+                      placeholder="Message"
+                      required="required"
+                    ></textarea>
+                  </div>
+                  <div>
+                    <button class="btn" type="submit">Send Message</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Contact End -->
+
+      <!-- Footer Start -->
+      <div class="footer w-100">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-3">
+              <div class="footer-contact">
+                <h2>Get In Touch</h2>
+                <p>
+                  <i class="fa fa-map-marker-alt"></i>D-209 Krishna Apara Golf
+                  View Plaza, Alpha-I Commercial Belt, Greater Noida, Uttar
+                  Pradesh 201306
+                </p>
+                <a href="tel:9311236933"
+                  ><i class="fa fa-phone-alt"></i>9311236933</a
+                >
+                <a href="tel:9310902744"
+                  ><i class="fa fa-phone-alt"></i>9310902744</a
+                >
+                <a href="tel:9540936933"
+                  ><i class="fa fa-phone-alt"></i>9540936933</a
+                >
+                <a href="tel:8595360357"
+                  ><i class="fa fa-phone-alt"></i>8595360357</a
+                >
+                <a href="tel:9971550018"
+                  ><i class="fa fa-phone-alt"></i>9971550018</a
+                >
+                <a href="tel:7042732638"
+                  ><i class="fa fa-phone-alt"></i>7042732638</a
+                >
+                <a href="mailto:info@collegecharcha.co.in"
+                  ><i class="fa fa-envelope"></i>info@collegecharcha.co.in</a
+                >
+                <div class="footer-social">
+                  <a href="https://twitter.com/collegecharcha" target="_blank"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100093281640759"
+                    target="_blank"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                  <a
+                    href="https://www.youtube.com/@collegecharcha"
+                    target="_blank"
+                    ><i class="fab fa-youtube"></i
+                  ></a>
+                  <a
+                    href="https://www.instagram.com/collegecharcha/"
+                    target="_blank"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/in/college-charcha-328a41256/"
+                    target="_blank"
+                    ><i class="fab fa-linkedin-in"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="footer-link">
+                <h2>Sitemap</h2>
+                <a href="#landing-page">Home</a>
+                <a href="#about">About Us</a>
+                <a href="#feature">Our Courses</a>
+                <a href="#why-choose-us">Why Choose Us</a>
+                <a href="#contact">Contact Us</a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="footer-form">
+                <h2>Stay Updated</h2>
+                <p>
+                  Stay in the loop and stay well-informed about our most recent
+                  and upcoming endeavors.
+                </p>
+                <form
+                  action="https://college-charcha.onrender.com/api/newsletter"
+                  method="POST"
+                  id="newsletter-form"
+                  onsubmit="submitForm(event)"
+                >
+                  <input
+                    name="email"
+                    class="form-control"
+                    placeholder="Email here"
+                  />
+                  <button class="btn">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container copyright">
+          <div class="row">
+            <div class="col-md-6">
+              <p>
+                © 2024 <a href="#landing-page">College Charcha</a>, All Rights
+                Reserved
+              </p>
+            </div>
+            <div class="col-md-6">
+              <p>
+                Designed By
+                <a href="https://github.com/sohail300" target="_blank"
+                  >Sohail</a
+                >
+                with 💗
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="./files/jquery-3.4.1.min.js.download"></script>
+    <script src="./files/bootstrap.bundle.min.js.download"></script>
+    <script src="./files/easing.min.js.download"></script>
+    <script src="./files/lightbox.min.js.download"></script>
+    <script src="./files/isotope.pkgd.min.js.download"></script>
+    <script src="./files/owl.carousel.min.js.download"></script>
+    <script>
+      $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          800: {
+            items: 2,
+          },
+          1000: {
+            items: 3,
+          },
+        },
+      });
+    </script>
+
+    <!-- Template Javascript -->
+    <script src="./files/main.js.download"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
