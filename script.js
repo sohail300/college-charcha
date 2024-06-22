@@ -8,7 +8,7 @@ function closePopup() {
 
 // Scroll Reveal
 ScrollReveal().reveal('.hero-intro', {
-    distance: '25%',
+    distance: '8%',
     origin: 'left',
     opacity: '0.1',
     easing: 'ease-in-out',
@@ -17,7 +17,7 @@ ScrollReveal().reveal('.hero-intro', {
 });
 
 ScrollReveal().reveal('.hero-img', {
-    distance: '25%',
+    distance: '8%',
     origin: 'right',
     opacity: '0.1',
     easing: 'ease-in-out',
@@ -25,8 +25,30 @@ ScrollReveal().reveal('.hero-img', {
     scale: 1
 });
 
+ScrollReveal().reveal(".form-image-container", {
+    duration: 800,
+    origin: "top",
+    distance: "400px",
+    easing: "cubic-bezier(0.5, 0, 0, 1)",
+    rotate: {
+        x: 20,
+        z: -10
+    }
+});
+
+ScrollReveal().reveal(".form", {
+    duration: 800,
+    origin: "bottom",
+    distance: "400px",
+    easing: "cubic-bezier(0.5, 0, 0, 1)",
+    rotate: {
+        x: 20,
+        z: -10
+    }
+});
+
 ScrollReveal().reveal('.about-img', {
-    distance: '25%',
+    distance: '8%',
     origin: 'left',
     opacity: '0.1',
     easing: 'ease-in-out',
@@ -35,7 +57,7 @@ ScrollReveal().reveal('.about-img', {
 });
 
 ScrollReveal().reveal('.about-text', {
-    distance: '25%',
+    distance: '8%',
     origin: 'right',
     opacity: '0.1',
     easing: 'ease-in-out',
@@ -89,7 +111,7 @@ ScrollReveal().reveal('.features-subtitle', {
 });
 
 ScrollReveal().reveal('.contact-img', {
-    distance: '25%',
+    distance: '8%',
     origin: 'left',
     opacity: '0.1',
     easing: 'ease-in-out',
@@ -98,7 +120,7 @@ ScrollReveal().reveal('.contact-img', {
 });
 
 ScrollReveal().reveal('.contact-form', {
-    distance: '25%',
+    distance: '8%',
     origin: 'right',
     opacity: '0.1',
     easing: 'ease-in-out',

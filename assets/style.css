@@ -217,8 +217,8 @@ img {
 /********** Header CSS *********/
 
 .header {
-  position: relative;
-  width: 100%;
+  /* position: relative; */
+  /* width: 100%; */
   padding: 15px 0 0 0;
   background: #00539c;
 }
@@ -287,7 +287,7 @@ img {
 .header .navbar .btn {
   position: relative;
   margin-left: 15px;
-  padding: 12px 20px 10px 20px;
+  padding: 10px 20px 10px 20px;
   font-size: 13px;
   text-transform: uppercase;
   color: #000;
@@ -388,6 +388,11 @@ img {
   width: 60%;
 }
 
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .form-section {
   padding: 60px 120px;
   position: relative;
@@ -409,7 +414,7 @@ img {
 }
 
 .form-section p {
-  margin: 10px 0 20px 0;
+  margin: 10px 0 10px 0;
   font-size: 22px;
   color: #000;
 }

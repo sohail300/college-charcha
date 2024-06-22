@@ -1,7 +1,7 @@
 /******* Header Section ********/
 @media (min-width: 992px) {
   .header .row {
-    padding: 0 60px;
+    /* padding: 0 60px; */
   }
 
   .header .navbar {
@@ -56,9 +56,15 @@
   }
 }
 
-@media (max-width: 360px) {
+@media (max-width: 400px) {
   .topbar-col a {
     font-size: 11px !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .topbar-col a {
+    font-size: 9.75px !important;
   }
 }
 
