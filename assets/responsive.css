@@ -1,4 +1,127 @@
+/******* Header Section ********/
+@media (min-width: 992px) {
+  .header .row {
+    padding: 0 60px;
+  }
+
+  .header .navbar {
+    background: transparent !important;
+  }
+
+  .header .navbar-brand {
+    display: none;
+  }
+
+  .header .navbar-light a.nav-link,
+  .header .navbar-light .show > .nav-link {
+    position: relative;
+    padding: 8px 10px;
+    color: #ffffff;
+    font-size: 16px;
+    z-index: 1;
+  }
+
+  .header .navbar-light a.nav-link:hover,
+  .header .navbar-light a.nav-link.active {
+    color: gold;
+  }
+}
+
+@media (max-width: 992px) {
+  .header .brand {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .header .navbar {
+    background: #ffffff !important;
+    border: none;
+    z-index: 0;
+  }
+
+  .header a.nav-link {
+    padding: 5px 0;
+  }
+
+  .header .dropdown-menu {
+    box-shadow: none;
+  }
+
+  .header .navbar {
+    border-radius: 5px;
+  }
+
+  .header .navbar .btn {
+    display: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .topbar-col a {
+    font-size: 11px !important;
+  }
+}
+
+/******* Form ********/
+@media (max-width: 767.98px) {
+  .form {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 992px) {
+  .form {
+    margin-top: 0px;
+  }
+
+  .form-image-container {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .form-section {
+    padding: 60px 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-section {
+    padding: 60px 40px;
+  }
+}
+
+@media (max-width: 380px) {
+  .form-section {
+    padding: 60px 24px;
+  }
+}
+
 /******* Hero Section ********/
+@media (max-width: 992px) {
+  .hero-intro {
+    margin-top: 100px;
+  }
+
+  .hero-img img {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 676px) {
+  .hero h2 {
+    margin: 0;
+    font-size: 30px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  .hero p {
+    margin: 10px 0 20px 0;
+    font-size: 18px;
+    color: #000;
+  }
+}
 
 @media (max-width: 480px) {
   .hero {
@@ -23,7 +146,6 @@
 }
 
 /******* About us Section ********/
-
 @media (max-width: 1200px) {
   .about h2 {
     font-size: 40px;
@@ -35,6 +157,12 @@
 
   .about .about-text h2 span {
     font-size: 48px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about .about-img img {
+    margin-bottom: 30px;
   }
 }
 
@@ -59,13 +187,7 @@
   }
 }
 
-.responsive-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 20px;
-}
-
+/******* Courses Section ********/
 @media (max-width: 576px) {
   .responsive-container {
     display: flex;
@@ -82,12 +204,113 @@
   }
 }
 
+/******* Why Choose Us Section ********/
+@media screen and (max-width: 1200px) {
+  .features-glassmorphic {
+    height: 240px;
+    width: 28%;
+    margin-top: 3rem;
+  }
+
+  .features-title {
+    font-size: 1.525rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .features-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .features-glassmorphic {
+    height: 24%;
+    width: 60%;
+    padding: 1rem 3rem;
+  }
+
+  .features-desktop-image {
+    display: none;
+  }
+
+  .features-mobile-image {
+    display: block;
+  }
+
+  .features-glassmorphic-container {
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  .features-title {
+    font-size: 2rem;
+  }
+
+  .features-subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .features-glassmorphic {
+    height: 25%;
+    width: 60%;
+    padding: 1rem 3rem;
+  }
+
+  .features-title {
+    font-size: 1.75rem;
+  }
+
+  .features-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .features-glassmorphic {
+    height: 25%;
+    width: 70%;
+    padding: 2rem 2rem;
+  }
+
+  .features-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .features-subtitle {
+    font-size: 0.875rem;
+  }
+}
+
 @media (max-width: 480px) {
   .why-choose-us h2 {
     font-size: 40px;
   }
+}
 
-  .why-choose-us h3 {
-    font-size: 20px;
+@media screen and (max-width: 440px) {
+  .features-glassmorphic {
+    height: 25%;
+    width: 85%;
+    padding: 3rem 2rem;
+  }
+
+  .features-title {
+    font-size: 1rem;
+  }
+
+  .features-subtitle {
+    font-size: 0.825rem;
+  }
+}
+
+/******* Footer Section ********/
+@media (max-width: 768px) {
+  .footer .copyright p,
+  .footer .copyright .col-md-6:last-child p {
+    margin: 5px 0;
+    text-align: center;
   }
 }

@@ -1,8 +1,6 @@
-/*******************************/
 /********* General CSS *********/
-/*******************************/
 :root {
-  --rich-pruple: #0c2372;
+  --rich-pruple: #057b80;
   --purple: #500650;
   --gold: #efac00;
 }
@@ -12,6 +10,7 @@ body {
   background: #ffffff;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 h1,
@@ -57,11 +56,19 @@ button:hover {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
+img {
+  object-fit: cover;
+}
+
 .wrapper {
   position: relative;
   width: 100%;
   margin: 0 auto;
   background: #ffffff;
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
 
 /********** Popup CSS *********/
@@ -264,12 +271,6 @@ button:hover {
   color: #ffffff;
 }
 
-@media (min-width: 992px) {
-  .header .row {
-    padding: 0 60px;
-  }
-}
-
 .header .header-top {
   padding-top: 8px;
   padding-bottom: 8px;
@@ -281,51 +282,6 @@ button:hover {
   color: #ffffff;
   font-size: 30px;
   font-weight: 700;
-}
-
-@media (min-width: 992px) {
-  .header .navbar {
-    background: transparent !important;
-  }
-
-  .header .navbar-brand {
-    display: none;
-  }
-
-  .header .navbar-light a.nav-link,
-  .header .navbar-light .show > .nav-link {
-    position: relative;
-    padding: 8px 10px;
-    color: #ffffff;
-    font-size: 16px;
-    z-index: 1;
-  }
-
-  .header .navbar-light a.nav-link:hover,
-  .header .navbar-light a.nav-link.active {
-    color: gold;
-  }
-}
-
-@media (max-width: 992px) {
-  .header .brand {
-    text-align: center;
-    margin-bottom: 15px;
-  }
-
-  .header .navbar {
-    background: #ffffff !important;
-    border: none;
-    z-index: 0;
-  }
-
-  .header a.nav-link {
-    padding: 5px 0;
-  }
-
-  .header .dropdown-menu {
-    box-shadow: none;
-  }
 }
 
 .header .navbar .btn {
@@ -355,55 +311,35 @@ button:hover {
   margin-right: 8px;
 }
 
-@media (max-width: 992px) {
-  .header .navbar {
-    border-radius: 5px;
-  }
-
-  .header .navbar .btn {
-    display: none;
-  }
-}
-
-/* Hero Section */
-
+/******* Hero Section ********/
 .hero {
-  /* background-image: url("https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1267&q=80"); */
-  /* background-size: cover; */
-  /* position: absolute; */
-  /* height: calc(100% + 40px); */
-  /* opacity: 0.8; */
-  /* width: 100%; */
-  width: calc(100% + 16px);
-  padding: 60px;
+  padding: 60px 100px;
   margin-top: 60px;
-  background: linear-gradient(
-    180deg,
-    rgb(5, 19, 64) 0%,
-    #0f2879 60%,
-    #2a50ce 100%
-  );
-}
-
-.hero .text {
-  margin-top: 20px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hero h2 {
   margin: 0;
-  font-size: 40px;
-  font-weight: 300;
-  color: #fff;
+  font-size: 48px;
+  font-weight: 600;
+  color: #000;
 }
 
 .hero h2 span {
   color: #efac00;
 }
 
+.hero-img img {
+  width: 100%;
+}
+
 .hero p {
   margin: 10px 0 20px 0;
   font-size: 22px;
-  color: #fff;
+  color: #000;
 }
 
 .hero a.btn {
@@ -427,7 +363,58 @@ button:hover {
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
-.hero .form {
+.hero-grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.hero-grid-item {
+  border: 2px solid #f1f4f8;
+}
+
+.span-3 {
+  grid-column: span 3;
+}
+
+/******* Form ********/
+
+.form-image-container img {
+  width: 60%;
+}
+
+.form-section {
+  padding: 60px 120px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #8b8b8b;
+}
+
+.form-section h2 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 600;
+  color: #000;
+}
+
+.form-section h2 span {
+  color: #efac00;
+}
+
+.form-section p {
+  margin: 10px 0 20px 0;
+  font-size: 22px;
+  color: #000;
+}
+
+.form {
   padding: 30px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -436,37 +423,37 @@ button:hover {
   backdrop-filter: blur(10px);
 }
 
-.hero .form h3 {
-  color: #fff;
+.form h3 {
+  color: #000;
   font-weight: 300;
 }
 
-.hero .form input,
-.hero .form select,
-.hero .form textarea {
-  color: #fff;
+.form input,
+.form select,
+.form textarea {
+  color: #000;
   margin-bottom: 15px;
   height: 45px;
   border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255);
 }
 
-.hero .form textarea {
+.form textarea {
   height: 75px;
 }
 
-.hero .form select,
-.hero .form input::placeholder,
-.hero .form textarea::placeholder {
-  color: #fff;
-}
-
-.hero .form select option {
+.form select,
+.form input::placeholder,
+.form textarea::placeholder {
   color: #000;
 }
 
-.hero .form .btn {
+.form select option {
+  color: #000;
+}
+
+.form .btn {
   position: relative;
   padding: 10px 35px;
   font-size: 16px;
@@ -478,15 +465,9 @@ button:hover {
   transition: 0.3s;
 }
 
-.hero .form .btn:hover {
+.form .btn:hover {
   color: #fff;
   background: purple;
-}
-
-@media (max-width: 767.98px) {
-  .hero .form {
-    margin-top: 60px;
-  }
 }
 
 /******* Section Header ********/
@@ -515,7 +496,13 @@ button:hover {
   position: relative;
   width: 100%;
   padding: 40px 0;
-  background-color: #eee;
+  background-color: #dcf7ff;
+}
+
+.about-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .about h2 {
@@ -525,8 +512,7 @@ button:hover {
 }
 
 .about .about-img img {
-  width: 80%;
-  border-radius: 5px;
+  width: 100%;
 }
 
 .about .about-text h2 span {
@@ -538,29 +524,63 @@ button:hover {
   margin-bottom: 30px;
 }
 
-.about .about-text a.btn {
-  padding: 15px 35px;
-  font-size: 16px;
+/********* Service CSS *********/
+.service {
+  position: relative;
+  width: 100%;
+  padding: 45px 0px;
+}
+
+.service .btn {
+  margin: auto 0px;
+  height: 48px;
+  padding: 0 20px;
+  color: #000;
+  font-size: 18px;
   text-transform: uppercase;
-  color: #000000;
-  border: none;
-  border-radius: 5px;
   background: gold;
+  border-radius: 5px;
   transition: 0.3s;
 }
 
-.about .about-text a.btn:hover {
-  color: #ffffff;
-  background: #00539c;
+.service .btn:hover {
+  color: #fff;
+  background: purple;
 }
 
-@media (max-width: 767.98px) {
-  .about .about-img img {
-    margin-bottom: 30px;
-  }
+.service .service-item {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 8px;
+  margin-bottom: 30px;
+  padding: 8px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
 }
 
-/********* Feature CSS *********/
+.service .service-item:hover {
+  transform: scale(1.05);
+}
+
+.service .service-item img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  /* height: 150px; */
+  aspect-ratio: 3/2;
+}
+
+.service .service-item h3 {
+  margin: 0;
+  padding: 8px 0px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--rich-pruple);
+}
+
+/********* Courses *********/
 .glass-card {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
@@ -606,13 +626,20 @@ button:hover {
 .feature {
   width: 100%;
   padding: 40px 0px;
+  position: relative;
 }
 
 .feature .section-header {
   margin-bottom: 0;
 }
 
-/*********** Why Choose Us CSS **********/
+.responsive-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
+
 .responsive-container img {
   height: 10rem;
   width: auto;
@@ -621,16 +648,83 @@ button:hover {
   object-fit: cover;
 }
 
+/********** Why Choose Us *********/
+
+.why-choose-us {
+  /* margin-bottom: 2rem; */
+}
+
+.why-choose-us-features {
+  position: relative;
+  color: #fff;
+}
+
+.why-choose-us img {
+  width: 100%;
+}
+
 .why-choose-us h2 {
   color: var(--rich-pruple);
   margin-bottom: 10px;
   font-size: 50px;
-  font-weight: 300;
+  font-weight: 1400;
+  text-align: center;
 }
 
-.why-choose-us h3 {
-  color: var(--rich-pruple);
-  margin-bottom: 10px;
+.features-glassmorphic {
+  background: linear-gradient(
+    180deg,
+    rgba(92, 92, 92, 0.4) 0%,
+    rgba(194, 194, 194, 0.1) 100%
+  );
+  height: 280px;
+  width: 25%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  cursor: pointer;
+  transition: transform 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 1rem;
+}
+
+.features-glassmorphic-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.features-title {
+  font-size: 1.75rem;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.features-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.features-desktop-image {
+  display: block;
+}
+
+.features-mobile-image {
+  display: none;
+}
+
+.features-glassmorphic:hover {
+  transform: scale(1.15);
 }
 
 /********* Contact CSS *********/
@@ -830,12 +924,4 @@ button:hover {
 
 .footer .copyright p a:hover {
   color: #ffffff;
-}
-
-@media (max-width: 768px) {
-  .footer .copyright p,
-  .footer .copyright .col-md-6:last-child p {
-    margin: 5px 0;
-    text-align: center;
-  }
 }
