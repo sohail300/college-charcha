@@ -54,7 +54,7 @@ document.getElementById('register-form').addEventListener('submit', function (ev
     console.log(formData);
 
     // Send form data to the backend
-    fetch('https://college-charcha-mmf7.onrender.com', {
+    fetch('https://college-charcha-mmf7.onrender.com/api/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
