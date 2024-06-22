@@ -9,9 +9,6 @@
     <!-- Favicon -->
     <link href="./cc-logo.jpg" rel="icon" />
 
-    <!-- Google Font -->
-    <link href="./files/css2" rel="stylesheet" />
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- CSS Libraries -->
@@ -31,7 +28,6 @@
       crossorigin="use-credentials"
     />
     <link rel="preconnect" href="https://fonts.gstatic.com/" />
-    <link rel="stylesheet" href="./files/css2(1)" />
 
     <!-- Font Awesome -->
     <script
@@ -52,17 +48,13 @@
           <h2>Request a Call</h2>
           <p>Fill out the form below to request a call</p>
 
-          <form
-            action="https://college-charcha.onrender.com/api/getacall"
-            method="POST"
-            id="getacall-form"
-            onsubmit="submitForm(event)"
-          >
+          <form id="getacall-form">
+            <!-- onsubmit="submitForm(event)" -->
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required />
+            <input type="text" id="popup-name" name="name" required />
 
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" required />
+            <input type="tel" id="popup-phone" name="phone" required />
 
             <button type="submit">Submit</button>
           </form>
@@ -263,14 +255,10 @@
               <h3 class="text-center">REGISTER NOW</h3>
               <h3 class="text-center">ADMISSIONS OPEN FOR 2024</h3>
             </div>
-            <form
-              action="https://college-charcha.onrender.com/api/register"
-              method="POST"
-              id="register-form"
-              onsubmit="submitForm(event)"
-            >
+            <form id="register-form">
               <input
                 name="name"
+                id="register-name"
                 class="form-control"
                 type="text"
                 autocomplete="off"
@@ -278,6 +266,7 @@
               />
               <input
                 name="email"
+                id="register-email"
                 class="form-control"
                 type="email"
                 autocomplete="off"
@@ -285,13 +274,14 @@
               />
               <input
                 name="phone"
+                id="register-phone"
                 class="form-control"
                 type="text"
                 placeholder="Mobile Number"
                 autocomplete="off"
               />
               <div class="control-group">
-                <select name="hero" class="custom-select">
+                <select name="hero" class="custom-select" id="register-college">
                   <option selected="">Choose a College</option>
                   <option value="GL">GL Bajaj</option>
                   <option value="Bennett">Bennett University</option>
@@ -302,7 +292,7 @@
                   <option value="JSS">JSS Noida</option>
                 </select>
               </div>
-              <button class="btn btn-block">Register</button>
+              <button class="btn btn-block" type="submit">Submit</button>
             </form>
           </div>
         </div>
@@ -630,16 +620,12 @@
             </div>
             <div class="col-md-6">
               <div class="contact-form">
-                <form
-                  action="https://college-charcha.onrender.com/api/contactus"
-                  method="POST"
-                  id="'contact-form"
-                  onsubmit="submitForm(event)"
-                >
+                <form id="'contact-form">
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <input
                         name="name"
+                        id="contact-name"
                         type="text"
                         class="form-control"
                         placeholder="Your Name"
@@ -649,6 +635,7 @@
                     <div class="form-group col-md-6">
                       <input
                         name="email"
+                        id="contact-email"
                         type="email"
                         class="form-control"
                         placeholder="Your Email"
@@ -659,6 +646,7 @@
                   <div class="form-group">
                     <input
                       name="phone"
+                      id="contact-phone"
                       type="text"
                       class="form-control"
                       placeholder="Phone Number"
@@ -668,6 +656,7 @@
                   <div class="form-group">
                     <textarea
                       name="course"
+                      id="contact-message"
                       class="form-control"
                       rows="6"
                       placeholder="Message"
@@ -726,18 +715,15 @@
                   Stay in the loop and stay well-informed about our most recent
                   and upcoming endeavors.
                 </p>
-                <form
-                  action="https://college-charcha.onrender.com/api/newsletter"
-                  method="POST"
-                  id="newsletter-form"
-                  onsubmit="submitForm(event)"
-                >
+                <form id="newsletter-form">
                   <input
                     name="email"
+                    id="newsletter-email"
+                    type="email"
                     class="form-control"
                     placeholder="Email here"
                   />
-                  <button class="btn">Submit</button>
+                  <button class="btn" type="submit">Submit</button>
                 </form>
               </div>
             </div>

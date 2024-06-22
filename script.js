@@ -6,6 +6,140 @@ function closePopup() {
     document.getElementById('callPopup').style.display = 'none';
 }
 
+
+// Form submission
+document.getElementById('getacall-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get form data
+    const formData = {
+        name: document.getElementById('popup-name').value,
+        phone: document.getElementById('popup-phone').value,
+    };
+
+    console.log(formData)
+
+    // Send form data to the backend
+    fetch('http://localhost:3000/api/getacall', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+    })
+        .then(response => {
+            if (response.ok) {
+                // Redirect to the new page
+                window.location.href = 'thankyou.html';
+            } else {
+                return response.json().then(error => { throw new Error(error.message); });
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+});
+
+document.getElementById('register-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get form data
+    const formData = {
+        name: document.getElementById('register-name').value,
+        email: document.getElementById('register-email').value,
+        phone: document.getElementById('register-phone').value,
+        college: document.getElementById('register-college').value,
+    };
+
+    console.log(formData);
+
+    // Send form data to the backend
+    fetch('http://localhost:3000/api/register', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+    })
+        .then(response => {
+            if (response.ok) {
+                // Redirect to the new page
+                window.location.href = 'thankyou.html';
+            } else {
+                return response.json().then(error => { throw new Error(error.message); });
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+});
+
+document.getElementById('contact-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get form data
+    const formData = {
+        name: document.getElementById('contact-name').value,
+        email: document.getElementById('contact-email').value,
+        phone: document.getElementById('contact-phone').value,
+        message: document.getElementById('contact-message').value,
+    };
+
+    console.log(formData);
+
+    // Send form data to the backend
+    fetch('http://localhost:3000/api/contactus', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+    })
+        .then(response => {
+            if (response.ok) {
+                // Redirect to the new page
+                window.location.href = 'thankyou.html';
+            } else {
+                return response.json().then(error => { throw new Error(error.message); });
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+});
+
+document.getElementById('newsletter-form').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent the default form submission
+
+    // Get form data
+    const formData = {
+        email: document.getElementById('newsletter-email').value,
+    };
+
+    console.log(formData);
+
+    // Send form data to the backend
+    fetch('http://localhost:3000/api/newsletter', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+    })
+        .then(response => {
+            if (response.ok) {
+                // Redirect to the new page
+                window.location.href = 'thankyou.html';
+            } else {
+                return response.json().then(error => { throw new Error(error.message); });
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+});
+
+
 // Scroll Reveal
 ScrollReveal().reveal('.hero-intro', {
     distance: '8%',
