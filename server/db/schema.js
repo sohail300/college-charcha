@@ -16,7 +16,7 @@ export const Newsletter = mongoose.model('Newsletter', {
     email: String,
 });
 
-export const Contact = model('Contact', {
+export const Contact = mongoose.model('Contact', {
     name: String,
     email: String,
     phone: String,

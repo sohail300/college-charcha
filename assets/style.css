@@ -311,6 +311,14 @@ img {
   margin-right: 8px;
 }
 
+.navbar-toggler:hover {
+  color: #fff;
+  background: gold;
+  outline: none;
+  transform: scale(1.05);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
 /******* Hero Section ********/
 .hero {
   padding: 60px 100px;

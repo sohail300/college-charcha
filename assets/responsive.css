@@ -312,6 +312,13 @@
   }
 }
 
+/******* Contact Section ********/
+@media (max-width: 768px) {
+  .contact-form {
+    margin-top: 2rem;
+  }
+}
+
 /******* Footer Section ********/
 @media (max-width: 768px) {
   .footer .copyright p,

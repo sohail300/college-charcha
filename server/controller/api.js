@@ -1,5 +1,5 @@
-import { Contact, GetACall, Newsletter, Register } from "../db/schema";
-import { transporter } from "../utils/transporter";
+import { Contact, GetACall, Newsletter, Register } from "../db/schema.js";
+import { transporter } from "../utils/transporter.js";
 
 export async function thankyou(req, res) {
     res.sendFile(join(__dirname, 'public', 'thankyou.html'));

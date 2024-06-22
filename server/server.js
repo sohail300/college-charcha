@@ -2,13 +2,14 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import path from 'path';
-import { connectDB } from './db/connection';
-import { contactus, getacall, newsletter, register, thankyou } from './controller/api';
+import { connectDB } from './db/connection.js';
+import { contactus, getacall, newsletter, register, thankyou } from './controller/api.js';
 
-dotenv();
+dotenv.config();
 
 const app = express();
 
+const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
