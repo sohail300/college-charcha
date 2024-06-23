@@ -9,7 +9,7 @@ export async function register(req, res) {
     await registerData.save();
 
     const info = await transporter.sendMail({
-      from: `Mail Trap <demomailtrap.com>`,
+      from: `<demomailtrap.com>`,
       to: 'sohailatwork10@gmail.com',
       subject: "College Enquiry",
       text: 'Hii'
