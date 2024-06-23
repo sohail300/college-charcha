@@ -16,7 +16,21 @@ document.getElementById('getacall-form').addEventListener('submit', function (ev
         phone: document.getElementById('popup-phone').value,
     };
 
-    console.log(formData)
+    let flag = 0;
+
+    if (formData.name === '') {
+        flag = 1;
+        outError("Please enter name");
+    }
+
+    if (formData.phone === '') {
+        flag = 1;
+        outError("Please enter phone number");
+    }
+
+    if (flag) {
+        return 0;
+    }
 
     // Send form data to the backend
     fetch('https://college-charcha-mmf7.onrender.com/api/getacall', {
@@ -50,7 +64,30 @@ document.getElementById('register-form').addEventListener('submit', function (ev
         college: document.getElementById('register-college').value,
     };
 
-    console.log(formData);
+    let flag = 0;
+
+    if (formData.name === '') {
+        flag = 1;
+        outError("Please enter name");
+    }
+    if (formData.email === '') {
+        flag = 1;
+        outError("Please enter email");
+    }
+
+    if (formData.phone === '') {
+        flag = 1;
+        outError("Please enter phone number");
+    }
+
+    if (formData.college === 'select') {
+        flag = 1;
+        outError("Please enter college");
+    }
+
+    if (flag) {
+        return 0;
+    }
 
     // Send form data to the backend
     fetch('https://college-charcha-mmf7.onrender.com/api/register', {
@@ -84,7 +121,30 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
         message: document.getElementById('contact-message').value,
     };
 
-    console.log(formData);
+    let flag = 0;
+
+    if (formData.name === '') {
+        flag = 1;
+        outError("Please enter name");
+    }
+    if (formData.email === '') {
+        flag = 1;
+        outError("Please enter email");
+    }
+
+    if (formData.phone === '') {
+        flag = 1;
+        outError("Please enter phone number");
+    }
+
+    if (formData.message === '') {
+        flag = 1;
+        outError("Please enter message");
+    }
+
+    if (flag) {
+        return 0;
+    }
 
     // Send form data to the backend
     fetch('https://college-charcha-mmf7.onrender.com/api/contactus', {
@@ -115,7 +175,16 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
         email: document.getElementById('newsletter-email').value,
     };
 
-    console.log(formData);
+    let flag = 0;
+
+    if (formData.email === '') {
+        flag = 1;
+        outError("Please enter email");
+    }
+
+    if (flag) {
+        return 0;
+    }
 
     // Send form data to the backend
     fetch('https://college-charcha-mmf7.onrender.com/api/newsletter', {
@@ -136,6 +205,36 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
         .catch((error) => {
             console.error('Error:', error);
         });
+});
+
+// Error Message
+const outError = (message) => {
+    const errorCont = document.getElementById("errorCont");
+
+    const errorBlock = document.createElement("div");
+    errorBlock.classList.add("error-block");
+
+    const data = `
+        <div class="error-message">
+            ${message}
+        </div>
+        <div class="line-div">
+            <div class="line-runner"></div>
+        </div>
+    `;
+
+    errorBlock.innerHTML = data;
+    errorCont.appendChild(errorBlock);
+
+    setTimeout(() => {
+        errorBlock.remove();
+    }, 4000);
+};
+
+// College Selection
+document.getElementById('register-college').addEventListener('change', function () {
+    const placeholderOption = this.querySelector('option[value="select"]');
+    placeholderOption.disabled = true;
 });
 
 // Scroll Reveal
