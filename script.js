@@ -6,7 +6,6 @@ function closePopup() {
     document.getElementById('callPopup').style.display = 'none';
 }
 
-
 // Form submission
 document.getElementById('getacall-form').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the default form submission
@@ -20,7 +19,7 @@ document.getElementById('getacall-form').addEventListener('submit', function (ev
     console.log(formData)
 
     // Send form data to the backend
-    fetch('http://localhost:3000/api/getacall', {
+    fetch('https://college-charcha-mmf7.onrender.com/api/getacall', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -88,7 +87,7 @@ document.getElementById('contact-form').addEventListener('submit', function (eve
     console.log(formData);
 
     // Send form data to the backend
-    fetch('http://localhost:3000/api/contactus', {
+    fetch('https://college-charcha-mmf7.onrender.com/api/contactus', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -119,7 +118,7 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
     console.log(formData);
 
     // Send form data to the backend
-    fetch('http://localhost:3000/api/newsletter', {
+    fetch('https://college-charcha-mmf7.onrender.com/api/newsletter', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -138,7 +137,6 @@ document.getElementById('newsletter-form').addEventListener('submit', function (
             console.error('Error:', error);
         });
 });
-
 
 // Scroll Reveal
 ScrollReveal().reveal('.hero-intro', {
