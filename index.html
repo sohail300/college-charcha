@@ -42,14 +42,13 @@
   <body>
     <div class="wrapper" id="landing-page">
       <!-- Popup starts -->
-      <div class="popup" id="callPopup">
+      <!-- <div class="popup" id="callPopup">
         <div class="popup-content">
           <span class="close-btn" onclick="closePopup()">&times;</span>
           <h2>Request a Call</h2>
           <p>Fill out the form below to request a call</p>
 
           <form id="getacall-form">
-            <!-- onsubmit="submitForm(event)" -->
             <label for="name">Name:</label>
             <input type="text" id="popup-name" name="name" />
 
@@ -59,20 +58,20 @@
             <button type="submit">Submit</button>
           </form>
         </div>
-      </div>
+      </div> -->
       <!-- Popup ends -->
 
       <!-- Social Media starts -->
-      <div id="social-links">
+      <!-- <div id="social-links">
         <a href="tel:+918595360357"
           ><i class="fa fa-phone-alt"></i><span>Call</span></a
         >
-      </div>
+      </div> -->
       <!-- Social Media ends -->
 
-      <a href="https://wa.me/+918595360357" id="whatsapp-link"
+      <!-- <a href="https://wa.me/+918595360357" id="whatsapp-link"
         ><i class="fa-brands fa-square-whatsapp"></i
-      ></a>
+      ></a> -->
 
       <!-- Header Start -->
       <div class="header home">
@@ -85,8 +84,8 @@
           <div class="col-lg-9">
             <div class="topbar">
               <div class="topbar-col">
-                <a href="tel:+919205023887"
-                  ><i class="fa fa-phone-alt"></i>+91 9205023887</a
+                <span class="number"
+                  ><i class="fa fa-phone-alt"></i>+91 9205023887</span
                 >
               </div>
             </div>
@@ -117,8 +116,8 @@
                     >Why Choose Us</a
                   >
                   <a href="#feature" class="nav-item nav-link">Courses</a>
-                  <a href="#contact" class="nav-item nav-link">Contact</a>
-                  <a class="btn" onclick="openPopup()">Get A Call</a>
+                  <!-- <a href="#contact" class="nav-item nav-link">Contact</a> -->
+                  <!-- <a class="btn" onclick="openPopup()">Get A Call</a> -->
                 </div>
               </div>
             </div>
@@ -200,7 +199,7 @@
             Building Futuristic Career with us, we are available for your
             guidance.
           </p>
-          <a class="btn" onclick="openPopup()">Enroll Now</a>
+          <!-- <a class="btn" onclick="openPopup()">Enroll Now</a> -->
         </div>
         <div class="col-lg-5">
           <div class="hero-img">
@@ -412,9 +411,9 @@
               </div>
             </div>
           </div>
-          <div class="text-center">
+          <!-- <div class="text-center">
             <button class="btn" onclick="openPopup()">GET A CALL</button>
-          </div>
+          </div> -->
         </div>
       </div>
       <!-- College End -->
@@ -577,7 +576,7 @@
       </div>
 
       <!-- Contact Start -->
-      <div id="contact" class="contact">
+      <!-- <div id="contact" class="contact">
         <div class="container">
           <div class="section-header">
             <h2>Contact Us</h2>
@@ -633,7 +632,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- Contact End -->
 
       <!-- Footer Start -->
@@ -648,32 +647,35 @@
                 <a href="#college">Consultancy Services</a>
                 <a href="#why-choose-us">Why Choose Us</a>
                 <a href="#feature">Courses</a>
-                <a href="#contact">Contact</a>
+                <!-- <a href="#contact">Contact</a> -->
               </div>
             </div>
 
             <div class="col-md-6 col-lg-3">
               <div class="footer-contact">
                 <h2>Contacts</h2>
-                <a href="tel:9205023887"
-                  ><i class="fa fa-phone-alt"></i>9205023887</a
-                >
-                <a href="tel:9718628269"
-                  ><i class="fa fa-phone-alt"></i>9718628269</a
-                >
-                <a href="tel:7042046038"
-                  ><i class="fa fa-phone-alt"></i>7042046038</a
-                >
+
+                <div class="number">
+                  <i class="fa fa-phone-alt"></i>9205023887
+                </div>
+
+                <div class="number">
+                  <a><i class="fa fa-phone-alt"></i>9718628269</a>
+                </div>
+
+                <div class="number">
+                  <a><i class="fa fa-phone-alt"></i>7042046038</a>
+                </div>
               </div>
             </div>
 
-            <div class="col-md-6 col-lg-3">
-              <div id="errorCont" class="error"></div>
+            <div id="errorCont" class="error"></div>
 
-              <div class="footer-form">
-                <h2>Stay Updated</h2>
-                <p>
-                  Stay in the loop and stay well-informed about our most recent
+            <!-- <div class="col-md-6 col-lg-3">
+            <div class="footer-form">
+              <h2>Stay Updated</h2>
+              <p>
+                Stay in the loop and stay well-informed about our most recent
                   and upcoming endeavors.
                 </p>
                 <form id="newsletter-form">
@@ -687,7 +689,8 @@
                   <button class="btn" type="submit">Submit</button>
                 </form>
               </div>
-            </div>
+            </div> -->
+
             <div class="col-md-6 col-lg-3">
               <div class="footer-contact">
                 <h2>Get In Touch</h2>
@@ -703,16 +706,14 @@
           <div class="row">
             <div class="col-md-6">
               <p>
-                © 2024 <a href="#landing-page">Career Charcha</a>, All Rights
+                © 2024 <span class="golden">Career Charcha</span>, All Rights
                 Reserved
               </p>
             </div>
             <div class="col-md-6">
               <p>
                 Developed By
-                <a href="https://github.com/sohail300" target="_blank"
-                  >Sohail</a
-                >
+                <span class="golden">Sohail</span>
               </p>
             </div>
           </div>

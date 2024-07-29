@@ -1,57 +1,57 @@
-function openPopup() {
-    document.getElementById('callPopup').style.display = 'flex';
-}
+// function openPopup() {
+//     document.getElementById('callPopup').style.display = 'flex';
+// }
 
-function closePopup() {
-    document.getElementById('callPopup').style.display = 'none';
-}
+// function closePopup() {
+//     document.getElementById('callPopup').style.display = 'none';
+// }
 
 // Form submission
-document.getElementById('getacall-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission
+// document.getElementById('getacall-form').addEventListener('submit', function (event) {
+//     event.preventDefault(); // Prevent the default form submission
 
-    // Get form data
-    const formData = {
-        name: document.getElementById('popup-name').value,
-        phone: document.getElementById('popup-phone').value,
-    };
+//     // Get form data
+//     const formData = {
+//         name: document.getElementById('popup-name').value,
+//         phone: document.getElementById('popup-phone').value,
+//     };
 
-    let flag = 0;
+//     let flag = 0;
 
-    if (formData.name === '') {
-        flag = 1;
-        outError("Please enter name");
-    }
+//     if (formData.name === '') {
+//         flag = 1;
+//         outError("Please enter name");
+//     }
 
-    if (formData.phone === '') {
-        flag = 1;
-        outError("Please enter phone number");
-    }
+//     if (formData.phone === '') {
+//         flag = 1;
+//         outError("Please enter phone number");
+//     }
 
-    if (flag) {
-        return 0;
-    }
+//     if (flag) {
+//         return 0;
+//     }
 
-    // Send form data to the backend
-    fetch('https://college-charcha-mmf7.onrender.com/api/getacall', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-    })
-        .then(response => {
-            if (response.ok) {
-                // Redirect to the new page
-                window.location.href = 'thankyou.html';
-            } else {
-                return response.json().then(error => { throw new Error(error.message); });
-            }
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
-});
+//     // Send form data to the backend
+//     fetch('https://college-charcha-mmf7.onrender.com/api/getacall', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(formData),
+//     })
+//         .then(response => {
+//             if (response.ok) {
+//                 // Redirect to the new page
+//                 window.location.href = 'thankyou.html';
+//             } else {
+//                 return response.json().then(error => { throw new Error(error.message); });
+//             }
+//         })
+//         .catch((error) => {
+//             console.error('Error:', error);
+//         });
+// });
 
 document.getElementById('register-form').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the default form submission
@@ -110,104 +110,105 @@ document.getElementById('register-form').addEventListener('submit', function (ev
         });
 });
 
-document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission
+// document.getElementById('contact-form').addEventListener('submit', function (event) {
+//     event.preventDefault(); // Prevent the default form submission
 
-    // Get form data
-    const formData = {
-        name: document.getElementById('contact-name').value,
-        email: document.getElementById('contact-email').value,
-        phone: document.getElementById('contact-phone').value,
-        message: document.getElementById('contact-message').value,
-    };
+//     // Get form data
+//     const formData = {
+//         name: document.getElementById('contact-name').value,
+//         email: document.getElementById('contact-email').value,
+//         phone: document.getElementById('contact-phone').value,
+//         message: document.getElementById('contact-message').value,
+//     };
 
-    let flag = 0;
+//     let flag = 0;
 
-    if (formData.name === '') {
-        flag = 1;
-        outError("Please enter name");
-    }
-    if (formData.email === '') {
-        flag = 1;
-        outError("Please enter email");
-    }
+//     if (formData.name === '') {
+//         flag = 1;
+//         outError("Please enter name");
+//     }
+//     if (formData.email === '') {
+//         flag = 1;
+//         outError("Please enter email");
+//     }
 
-    if (formData.phone === '') {
-        flag = 1;
-        outError("Please enter phone number");
-    }
+//     if (formData.phone === '') {
+//         flag = 1;
+//         outError("Please enter phone number");
+//     }
 
-    if (formData.message === '') {
-        flag = 1;
-        outError("Please enter message");
-    }
+//     if (formData.message === '') {
+//         flag = 1;
+//         outError("Please enter message");
+//     }
 
-    if (flag) {
-        return 0;
-    }
+//     if (flag) {
+//         return 0;
+//     }
 
-    // Send form data to the backend
-    fetch('https://college-charcha-mmf7.onrender.com/api/contactus', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-    })
-        .then(response => {
-            if (response.ok) {
-                // Redirect to the new page
-                window.location.href = 'thankyou.html';
-            } else {
-                return response.json().then(error => { throw new Error(error.message); });
-            }
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
-});
+//     // Send form data to the backend
+//     fetch('https://college-charcha-mmf7.onrender.com/api/contactus', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(formData),
+//     })
+//         .then(response => {
+//             if (response.ok) {
+//                 // Redirect to the new page
+//                 window.location.href = 'thankyou.html';
+//             } else {
+//                 return response.json().then(error => { throw new Error(error.message); });
+//             }
+//         })
+//         .catch((error) => {
+//             console.error('Error:', error);
+//         });
+// });
 
-document.getElementById('newsletter-form').addEventListener('submit', function (event) {
-    event.preventDefault(); // Prevent the default form submission
+// document.getElementById('newsletter-form').addEventListener('submit', function (event) {
+//     event.preventDefault(); // Prevent the default form submission
 
-    // Get form data
-    const formData = {
-        email: document.getElementById('newsletter-email').value,
-    };
+//     // Get form data
+//     const formData = {
+//         email: document.getElementById('newsletter-email').value,
+//     };
 
-    let flag = 0;
+//     let flag = 0;
 
-    if (formData.email === '') {
-        flag = 1;
-        outError("Please enter email");
-    }
+//     if (formData.email === '') {
+//         flag = 1;
+//         outError("Please enter email");
+//     }
 
-    if (flag) {
-        return 0;
-    }
+//     if (flag) {
+//         return 0;
+//     }
 
-    // Send form data to the backend
-    fetch('https://college-charcha-mmf7.onrender.com/api/newsletter', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-    })
-        .then(response => {
-            if (response.ok) {
-                // Redirect to the new page
-                window.location.href = 'thankyou.html';
-            } else {
-                return response.json().then(error => { throw new Error(error.message); });
-            }
-        })
-        .catch((error) => {
-            console.error('Error:', error);
-        });
-});
+//     // Send form data to the backend
+//     fetch('https://college-charcha-mmf7.onrender.com/api/newsletter', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json',
+//         },
+//         body: JSON.stringify(formData),
+//     })
+//         .then(response => {
+//             if (response.ok) {
+//                 // Redirect to the new page
+//                 window.location.href = 'thankyou.html';
+//             } else {
+//                 return response.json().then(error => { throw new Error(error.message); });
+//             }
+//         })
+//         .catch((error) => {
+//             console.error('Error:', error);
+//         });
+// });
 
 // Error Message
+
 const outError = (message) => {
     const errorCont = document.getElementById("errorCont");
 
@@ -341,20 +342,20 @@ ScrollReveal().reveal('.features-subtitle', {
     scale: 0.1
 });
 
-ScrollReveal().reveal('.contact-img', {
-    distance: '8%',
-    origin: 'left',
-    opacity: '0.1',
-    easing: 'ease-in-out',
-    duration: 800,
-    scale: 1
-});
+// ScrollReveal().reveal('.contact-img', {
+//     distance: '8%',
+//     origin: 'left',
+//     opacity: '0.1',
+//     easing: 'ease-in-out',
+//     duration: 800,
+//     scale: 1
+// });
 
-ScrollReveal().reveal('.contact-form', {
-    distance: '8%',
-    origin: 'right',
-    opacity: '0.1',
-    easing: 'ease-in-out',
-    duration: 800,
-    scale: 1
-});
+// ScrollReveal().reveal('.contact-form', {
+//     distance: '8%',
+//     origin: 'right',
+//     opacity: '0.1',
+//     easing: 'ease-in-out',
+//     duration: 800,
+//     scale: 1
+// });

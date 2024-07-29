@@ -35,6 +35,20 @@ a:focus {
   text-decoration: none;
 }
 
+.number {
+  color: #fff;
+  font-size: 14px;
+}
+
+.number i {
+  color: gold;
+  margin-right: 10px;
+}
+
+.golden {
+  color: gold;
+}
+
 button {
   position: relative;
   padding: 10px 20px 10px 20px;
